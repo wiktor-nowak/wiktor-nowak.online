@@ -1,0 +1,31 @@
+@import "/src/styles/variables.scss";
+
+.main-header {
+  @include body-very-small;
+  align-items: center;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: $medium-grey 1px solid;
+
+  .logo-like {
+    @include header-h6;
+    color: $dark-grey;
+    text-transform: uppercase;
+  }
+}
+
+.main-footer {
+  @include body-very-small;
+  align-items: center;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  border-top: $medium-grey 1px solid;
+
+  p {
+    color: $dark-grey;
+  }
+}

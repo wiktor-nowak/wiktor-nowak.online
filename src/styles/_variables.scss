@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
+// COLORS
+$background-color: #0e0e0e;
+$graphite: #222222;
+$dark-grey: #4e4e4e;
+$medium-grey: #9e9e9e;
+$light-grey: #cfcece;
+$off-white: #eeeeee;
+
+$graphite80: rgba(34, 34, 34, 0.8);
+$grey30: rgba(79, 79, 79, 0.3);
+
+$color-primary: #c6f53d;
+$color-secondary: #7eaef5;
+$red-dark: #a10505;
+$red-light: #fd7070;
+$red-pale: #ffeaea;
+
+@mixin kanit {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// FONTS
+@mixin body-very-small {
+  @include lato;
+  font-size: 0.75rem; //12px
+  line-height: 160%;
+}
+@mixin body-small {
+  //14px
+  @include lato;
+  font-size: 0.875rem;
+  line-height: 160%;
+}
+@mixin body-medium {
+  //16px
+  @include lato;
+  font-size: 1rem;
+  line-height: 160%;
+}
+@mixin body-large {
+  //18px
+  @include lato;
+  font-size: 1.125rem;
+  line-height: 160%;
+}
+@mixin body-very-large {
+  //24px
+  @include lato;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+@mixin header-h6 {
+  //16px
+  @include kanit;
+  font-size: 1rem;
+  line-height: 120%;
+}
+@mixin header-h5 {
+  //18px
+  @include kanit;
+  font-size: 1.125rem;
+  line-height: 120%;
+}
+@mixin header-h4 {
+  //24px
+  @include kanit;
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+@mixin header-h3 {
+  //32px
+  @include kanit;
+  font-size: 2rem;
+  line-height: 120%;
+}
+@mixin header-h2 {
+  //48px
+  @include kanit;
+  font-size: 3rem;
+  line-height: 120%;
+}
+@mixin header-h1 {
+  //64px
+  @include kanit;
+  font-size: 4rem;
+  line-height: 120%;
+}

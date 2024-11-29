@@ -1,0 +1,16 @@
+@import "/src/styles/variables.scss";
+
+.heading-container {
+  height: 118px;
+  padding: 0 76px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-top: $dark-grey solid 1px;
+  color: $medium-grey;
+}
+
+.section-content {
+  width: 100%;
+  padding: 24px 76px;
+}

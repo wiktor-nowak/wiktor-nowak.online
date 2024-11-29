@@ -1,0 +1,27 @@
+@import "/src/styles/variables.scss";
+
+.navigation-panel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  li {
+    @include body-medium;
+    list-style-type: none;
+    padding: 16px;
+    color: $medium-grey;
+    height: 100%;
+
+    a,
+    p {
+      cursor: pointer;
+    }
+
+    a:active,
+    a:hover,
+    p:active,
+    p:hover {
+      color: $off-white;
+    }
+  }
+}

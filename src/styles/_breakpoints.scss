@@ -1,0 +1,33 @@
+$breakpoints: (
+  "zero": 0px,
+  "sm": 600px,
+  "md": 960px,
+  "lg": 1280px
+);
+
+@mixin mobile {
+  @media (min-width: map-get($breakpoints, "zero")) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin custom-breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}

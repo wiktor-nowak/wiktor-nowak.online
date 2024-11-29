@@ -3,7 +3,8 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   sassOptions: {
-    includePaths: [path.join(__dirname, "src")]
+    includePaths: [path.join(__dirname, "src")],
+    silenceDeprecations: ["legacy-js-api"]
   }
 };
 
