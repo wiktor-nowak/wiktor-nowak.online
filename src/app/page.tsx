@@ -1,9 +1,7 @@
-// "use client";
 import Home from "@/components/Home/Home";
 import Section from "@/components/Section/Section";
 import { SECTIONS } from "@/types/variables";
-// import styles from "./page.module.scss";
-import { useEffect, useRef } from "react";
+import styles from "./page.module.scss";
 
 const MAIN_PAGE_SECTIONS = SECTIONS.map((section) => (
   <Section section={section} key={section.name}></Section>
@@ -20,7 +18,7 @@ export default function MainPage() {
   return (
     <>
       <Home />
-      {MAIN_PAGE_SECTIONS}
+      <div className={styles.home__content}></div>
     </>
   );
 }

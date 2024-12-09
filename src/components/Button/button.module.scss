@@ -1,0 +1,40 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+
+.button {
+  background-color: $color-primary;
+  padding: 0.75rem 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+  color: $graphite;
+
+  @include mobile {
+    padding: 0.75rem 2rem;
+  }
+
+  p {
+    @include body-medium;
+    min-height: 30px;
+    text-align: center;
+    line-height: 30px;
+    width: 100%;
+  }
+}
+
+.button:hover,
+.button:active {
+  background-color: $color-secondary;
+}
+
+// .button__primary {
+//   color: $color-black-elevated;
+//   background-color: $color-off-white;
+// }
+
+// .button__primary:hover,
+// .button__primary:active {
+//   color: $color-off-white;
+//   background-color: $color-black-elevated;
+// }
