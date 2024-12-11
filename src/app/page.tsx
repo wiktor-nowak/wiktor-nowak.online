@@ -1,11 +1,11 @@
 import Home from "@/components/Home/Home";
-import Section from "@/components/Section/Section";
-import { SECTIONS } from "@/types/variables";
+// import Section from "@/components/Section/Section";
+// import { SECTIONS } from "@/types/variables";
 import styles from "./page.module.scss";
 
-const MAIN_PAGE_SECTIONS = SECTIONS.map((section) => (
-  <Section section={section} key={section.name}></Section>
-));
+// const MAIN_PAGE_SECTIONS = SECTIONS.map((section) => (
+//   <Section section={section} key={section.name}></Section>
+// ));
 
 export default function MainPage() {
   // add a method which checks if I have any hash in my url. If so, scroll to it immediatelly.

@@ -4,6 +4,6 @@ declare module "*.module.css" {
 }
 
 declare module "*.png" {
-  const value: any;
+  const value: string | StaticImport;
   export = value;
 }
