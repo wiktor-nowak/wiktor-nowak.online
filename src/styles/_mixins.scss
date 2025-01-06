@@ -1,0 +1,27 @@
+@import "./_variables.scss";
+@import "./_breakpoints.scss";
+
+@mixin page-width {
+  width: 100%;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+
+  @include tablet {
+    padding: 0 22px;
+  }
+
+  @include laptop {
+    padding: 0 60px;
+  }
+  @include desktop {
+    width: 100%;
+    padding: 0 calc((100% - 1224px) * 0.5);
+  }
+}
+
+@mixin content-width {
+  padding: 0 6.5rem 0;
+  @content;
+}

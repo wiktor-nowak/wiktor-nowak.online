@@ -1,16 +1,21 @@
 @import "/src/styles/variables.scss";
+@import "/src/styles/mixins.scss";
 
-.heading-container {
-  height: 118px;
-  padding: 0 76px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  border-top: $dark-grey solid 1px;
-  color: $medium-grey;
-}
-
-.section-content {
+.section {
   width: 100%;
-  padding: 24px 76px;
+
+  .section__heading {
+    @include content-width;
+    height: 118px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-top: $dark-grey solid 1px;
+    color: $medium-grey;
+  }
+
+  .section__content {
+    width: 100%;
+    padding: 1.5rem 0 10rem;
+  }
 }

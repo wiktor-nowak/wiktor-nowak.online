@@ -1,5 +1,6 @@
-@import "/src/styles/_variables.scss";
-@import "/src/styles/_breakpoints.scss";
+@import "./_variables.scss";
+@import "./_breakpoints.scss";
+@import "./_mixins.scss";
 
 html,
 body {
@@ -22,24 +23,49 @@ body {
   margin: 0;
 }
 
-@mixin page-width {
-  width: 100%;
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  @include mobile {
-    padding: 0 16px;
-  }
+label,
+input {
+  display: block;
+}
 
-  @include tablet {
-    padding: 0 22px;
-  }
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
 
-  @include laptop {
-    padding: 0 60px;
-  }
-  @include desktop {
-    width: 100%;
-    padding: 0 calc((100% - 1224px) * 0.5);
-  }
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+p {
+  @include body-medium;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 main {
@@ -48,6 +74,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 10rem;
 }
 
 header,
@@ -60,9 +87,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  @include body-medium;
-}
 section {
   @include body-large;
 }
@@ -93,9 +117,5 @@ h1 {
 }
 
 article {
-  @include body-small;
-}
-
-section {
   @include body-small;
 }

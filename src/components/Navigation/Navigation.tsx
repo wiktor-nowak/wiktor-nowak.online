@@ -1,7 +1,7 @@
 import React from "react";
 import NavItem from "./NavItem/NavItem";
 import styles from "./navigation.module.scss";
-import { NAV_SECTIONS } from "@/types/variables";
+import { NAV_SECTIONS } from "@/src/types/variables";
 
 const NAV_ELEMENTS = NAV_SECTIONS.map((el) => {
   if (el.url) {
