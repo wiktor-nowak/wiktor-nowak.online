@@ -1,16 +1,13 @@
 import Home from "@/src/components/Home/Home";
 import { SECTIONS } from "@/src/types/variables";
 import styles from "./page.module.scss";
+
 import Section from "@/src/components/Section/Section";
 import Accomplishments from "@/src/components/Accomplishments/Accomplishments";
 import List from "@/src/components/List/List";
 import Tech from "@/src/components/Tech/Tech";
 import Button from "../components/Button/Button";
-import type { Metadata } from "next";
-
-// const MAIN_PAGE_SECTIONS = SECTIONS.map((section) => (
-//   <Section section={section} key={section.name}></Section>
-// ));
+import { In } from "@/src/components/icons";
 
 const HOBBIES = ["Sport", "Heavy music", "Board & PC Games"];
 const LANGUAGES = ["English - C1", "Polish - native"];
@@ -26,12 +23,14 @@ export default function MainPage() {
   return (
     <>
       <Home />
+      <div>
+        SIEMA <In height={40} width={40} />
+      </div>
       <div className={styles.home__content}></div>
       <Section name={SECTIONS.timeline.name} hashtag={SECTIONS.timeline.hashtag}>
         <p>timeline</p>
       </Section>
       <Section name={SECTIONS.acc.name} hashtag={SECTIONS.acc.hashtag}>
-        <p>timeline</p>
         <Accomplishments />
       </Section>
       <Section name={SECTIONS.languages.name} hashtag={SECTIONS.languages.hashtag}>
@@ -44,8 +43,12 @@ export default function MainPage() {
       <Section name={SECTIONS.hobbies.name} hashtag={SECTIONS.hobbies.hashtag}>
         <List list={HOBBIES} />
       </Section>
-      <Button text="Download my CV" />
-      <Button text="" isIconButton />
+      <Button>
+        <p>Siems</p>
+      </Button>
+      <Button isRound>
+        <In height={24} width={24} />
+      </Button>
     </>
   );
 }

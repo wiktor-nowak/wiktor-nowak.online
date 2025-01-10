@@ -1,0 +1,339 @@
+@import "/src/styles/variables";
+
+.angular {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .angular__primary {
+    fill: #0e0e0e;
+  }
+  .angular__secondary {
+    fill: #4e4e4e;
+  }
+  .angular__grey {
+    fill: #cfcece;
+  }
+}
+
+.angular:hover {
+  .angular__primary {
+    fill: #a6120d;
+  }
+  .angular__secondary {
+    fill: #dd1b16;
+  }
+  .angular__grey {
+    fill: #b3b3b3;
+  }
+}
+
+.css {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .css__primary {
+    fill: #0e0e0e;
+  }
+  .css__secondary {
+    fill: #4e4e4e;
+  }
+  .css__grey {
+    fill: #cfcece;
+  }
+}
+
+.css:hover {
+  .css__primary {
+    fill: #1572b6;
+  }
+  .css__secondary {
+    fill: #33a9dc;
+  }
+  .css__grey {
+    fill: #ebebeb;
+  }
+}
+
+.git {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .git__primary {
+    fill: #cfcece;
+  }
+}
+
+.git:hover {
+  .git__primary {
+    fill: #f34f29;
+  }
+}
+
+.html {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .html__primary {
+    fill: #0e0e0e;
+  }
+  .html__secondary {
+    fill: #4e4e4e;
+  }
+  .html__grey {
+    fill: #cfcece;
+  }
+}
+
+.html:hover {
+  .html__primary {
+    fill: #e44d26;
+  }
+  .html__secondary {
+    fill: #f16529;
+  }
+  .html__grey {
+    fill: #ebebeb;
+  }
+}
+
+.jest {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .jest__primary {
+    fill: #cfcece;
+  }
+}
+
+.jest:hover {
+  .jest__primary {
+    fill: #99425b;
+  }
+}
+
+.js {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .js__primary {
+    fill: #cfcece;
+  }
+  .js__background {
+    fill: #0e0e0e;
+  }
+}
+
+.js:hover {
+  .js__primary {
+    fill: #f0db4f;
+  }
+  .js__background {
+    fill: #323330;
+  }
+}
+
+.next {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .next__primary {
+    fill: #cfcece;
+  }
+}
+
+.next:hover {
+  .next__primary {
+    fill: #000000;
+  }
+}
+
+.node {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .node__primary {
+    fill: #cfcece;
+  }
+}
+.node:hover {
+  .node__primary {
+    fill: #83cd29;
+  }
+}
+
+.react {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .react__primary {
+    fill: #cfcece;
+  }
+  .react__secondary {
+    fill: #cfcece;
+  }
+}
+
+.react:hover {
+  .react__primary {
+    fill: #61dafb;
+  }
+  .react__secondary {
+    fill: #61dafb;
+  }
+}
+
+.redux {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .redux__primary {
+    fill: #cfcece;
+  }
+}
+.redux:hover {
+  .redux__primary {
+    fill: #764abc;
+  }
+}
+
+.rollup {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .rollup__primary {
+    fill: #cfcece;
+  }
+  .rollup__secondary {
+    fill: #0e0e0e;
+  }
+  .rollup__background {
+    fill: #4e4e4e;
+  }
+}
+
+.rollup:hover {
+  .rollup__primary {
+    fill: #fbb040;
+  }
+  .rollup__secondary {
+    fill: #bf3338;
+  }
+  .rollup__background {
+    fill: #ff3333;
+  }
+}
+
+.sass {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .sass__primary {
+    fill: #cfcece;
+  }
+}
+
+.sass:hover {
+  .sass__primary {
+    fill: #cb6699;
+  }
+}
+
+.tailwind {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .tailwind__primary {
+    fill: #cfcece;
+  }
+}
+
+.tailwind:hover {
+  .tailwind__primary {
+    fill: #38bdf8;
+  }
+}
+
+.tl {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .tl__primary {
+    fill: #0e0e0e;
+  }
+  .tl__secondary {
+    fill: #4e4e4e;
+  }
+  .tl__third {
+    fill: #cfcece;
+  }
+}
+
+.tl:hover {
+  .tl__primary {
+    fill: #640e0e;
+  }
+  .tl__secondary {
+    fill: #da4b6a;
+  }
+  .tl__third {
+    fill: #f7b3c5;
+  }
+}
+
+.ts {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .ts__primary {
+    fill: #4e4e4e;
+  }
+  .ts__secondary {
+    fill: #cfcece;
+  }
+}
+
+.ts:hover {
+  .ts__primary {
+    fill: #007acc;
+  }
+  .ts__secondary {
+    fill: #ffffff;
+  }
+}
+
+.webpack {
+  path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  .webpack__primary {
+    fill: #4e4e4e;
+  }
+  .webpack__secondary {
+    fill: #cfcece;
+  }
+}
+
+.webpack:hover {
+  .webpack__primary {
+    fill: #1c78c0;
+  }
+  .webpack__secondary {
+    fill: #8ed6fb;
+  }
+}

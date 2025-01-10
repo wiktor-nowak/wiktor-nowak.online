@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "@/src/styles/globals.scss";
 import Header from "@/src/components/LayoutComponents/Header/Header";
 import Footer from "@/src/components/LayoutComponents/Footer/Footer";
+import "@/src/styles/globals.scss";
 
 export const metadata: Metadata = {
   title: {

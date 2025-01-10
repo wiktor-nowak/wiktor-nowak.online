@@ -2,24 +2,25 @@
 
 import React from "react";
 import styles from "./button.module.scss";
-import { Arrow } from "../icons";
+import { IconType } from "@/src/types/style";
 
 type ButtonType = {
-  text: string;
-  isIconButton?: boolean;
+  isRound?: boolean;
+  children: React.ReactNode;
 };
 function clicked() {
   window.alert("Siema!");
 }
 
-export default function Button({ text, isIconButton = false }: ButtonType) {
+export default function Button({ isRound = false, children }: ButtonType) {
   return (
     <button
-      className={`${styles.button} ${isIconButton ? styles["button--icon"] : ""}`}
+      className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
       onClick={clicked}
     >
-      <p>{text}</p>
-      {isIconButton ?? <Arrow />}
+      {children}
     </button>
   );
 }
+
+// ${isRound ? styles["button--icon"] : ""}`

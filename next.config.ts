@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "src")],
     silenceDeprecations: ["legacy-js-api"]
+  },
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+
+    return config;
   }
 };
 

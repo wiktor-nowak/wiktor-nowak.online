@@ -4,6 +4,8 @@
 .button {
   @include body-large;
   color: $off-white;
+  fill: $off-white;
+  stroke: $off-white;
   background-color: transparent;
   height: 44px;
   border-radius: 22px;
@@ -19,15 +21,11 @@
     line-height: 28rem;
     color: inherit;
   }
+}
 
-  svg {
-    fill: inherit;
-    stroke: inherit;
-  }
-
-  &--icon {
-    width: 44px;
-  }
+.button--isRound {
+  padding: 0;
+  width: 44px;
 }
 
 .button:active {
