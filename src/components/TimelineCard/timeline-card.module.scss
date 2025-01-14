@@ -1,0 +1,69 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+
+.card {
+  color: $light-grey;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+
+  .card__content {
+    @include body-medium;
+    height: 100%;
+    width: calc(40% - 20px);
+    margin-right: 20px;
+    min-width: 405px;
+    background-color: $graphite;
+    border-radius: 1rem;
+    position: relative;
+
+    .card__triangle {
+      position: absolute;
+      top: 36px;
+      right: -19px;
+      height: 30px;
+      aspect-ratio: cos(30deg);
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      background-color: $graphite;
+    }
+
+    .card__header {
+      padding: 2rem 6.5rem 1rem;
+      line-height: 40px;
+      border-bottom: $dark-grey 1px solid;
+    }
+
+    .card__description {
+      padding: 1rem 6.5rem 2rem;
+    }
+  }
+
+  .card__blank {
+    width: 60%;
+    background-color: transparent;
+  }
+}
+
+.card__right {
+  .card__content {
+    width: calc(60% - 20px);
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  .card__blank {
+    width: 40%;
+  }
+
+  .card__triangle__right {
+    position: absolute;
+    top: 36px;
+    left: -20px;
+    height: 30px;
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    background-color: $graphite;
+  }
+}

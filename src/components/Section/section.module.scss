@@ -4,13 +4,18 @@
 .section {
   width: 100%;
 
+  .section__line {
+    width: 100%;
+    height: 1px;
+    background-color: $dark-grey;
+  }
+
   .section__heading {
     @include content-width;
     height: 118px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    border-top: $dark-grey solid 1px;
     color: $medium-grey;
   }
 

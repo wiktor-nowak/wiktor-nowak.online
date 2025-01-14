@@ -8,6 +8,7 @@ import List from "@/src/components/List/List";
 import Tech from "@/src/components/Tech/Tech";
 import Button from "../components/Button/Button";
 import { In } from "@/src/components/icons";
+import Timeline from "../components/Timeline/Timeline";
 
 const HOBBIES = ["Sport", "Heavy music", "Board & PC Games"];
 const LANGUAGES = ["English - C1", "Polish - native"];
@@ -28,26 +29,23 @@ export default function MainPage() {
       </div>
       <div className={styles.home__content}></div>
       <Section name={SECTIONS.timeline.name} hashtag={SECTIONS.timeline.hashtag}>
-        <p>timeline</p>
+        <Timeline />
       </Section>
       <Section name={SECTIONS.acc.name} hashtag={SECTIONS.acc.hashtag}>
         <Accomplishments />
       </Section>
-      <Section name={SECTIONS.languages.name} hashtag={SECTIONS.languages.hashtag}>
+      <Section name={SECTIONS.languages.name} hashtag={SECTIONS.languages.hashtag} withLine>
         <List list={LANGUAGES} />
       </Section>
-      <Section name={SECTIONS.tech.name} hashtag={SECTIONS.tech.hashtag}>
+      <Section name={SECTIONS.tech.name} hashtag={SECTIONS.tech.hashtag} withLine>
         <p>timeline</p>
         <Tech />
       </Section>
-      <Section name={SECTIONS.hobbies.name} hashtag={SECTIONS.hobbies.hashtag}>
+      <Section name={SECTIONS.hobbies.name} hashtag={SECTIONS.hobbies.hashtag} withLine>
         <List list={HOBBIES} />
       </Section>
       <Button>
-        <p>Siems</p>
-      </Button>
-      <Button isRound>
-        <In height={24} width={24} />
+        <p>Download my CV</p>
       </Button>
     </>
   );
