@@ -14,12 +14,5 @@
   .accomplishments__paragraph {
     @include body-medium;
     margin-top: 0.75rem;
-
-    .span__primary {
-      color: $color-primary;
-    }
-    .span__secondary {
-      color: $color-secondary;
-    }
   }
 }

@@ -24,9 +24,6 @@ export default function MainPage() {
   return (
     <>
       <Home />
-      <div>
-        SIEMA <In height={40} width={40} />
-      </div>
       <div className={styles.home__content}></div>
       <Section name={SECTIONS.timeline.name} hashtag={SECTIONS.timeline.hashtag}>
         <Timeline />

@@ -120,4 +120,9 @@ article {
   @include body-small;
 }
 
-
+.span__primary {
+  color: $color-primary;
+}
+.span__secondary {
+  color: $color-secondary;
+}

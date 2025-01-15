@@ -29,9 +29,9 @@ function Accomplishments() {
       <AccLine waveImage={IMAGES[0]} projectImage={ng}>
         <h3>1. &ensp; Components / Functionalities</h3>
         <p className={styles.accomplishments__paragraph}>
-          As a <span className={styles.span__secondary}>NorthGravity</span> employee, I was involved
-          in building
-          <span className={styles.span__primary}> the core product </span>
+          As a <span className="span__secondary">NorthGravity</span> employee, I was involved in
+          building
+          <span className="span__primary"> the core product </span>
           offered by the company.
         </p>
         <p className={styles.accomplishments__paragraph}>
@@ -44,9 +44,9 @@ function Accomplishments() {
         </p>
         <p className={styles.accomplishments__paragraph}>
           My superiors appreciated{" "}
-          <span className={styles.span__secondary}>my attitude towards our clients</span> as well as{" "}
-          <span className={styles.span__secondary}>communication skills</span> and marked them as
-          one of <span className={styles.span__secondary}>my strengths</span>.
+          <span className="span__secondary">my attitude towards our clients</span> as well as{" "}
+          <span className="span__secondary">communication skills</span> and marked them as one of{" "}
+          <span className="span__secondary">my strengths</span>.
         </p>
       </AccLine>
       <AccLine waveImage={IMAGES[1]} projectImage={kc}>
@@ -54,8 +54,8 @@ function Accomplishments() {
         <p className={styles.accomplishments__paragraph}>
           One of my first tasks, which helped me to get into real life development was creating an
           important part of the application my company was developing, which is Knowledge Center.
-          <span className={styles.span__primary}>xxx</span>
-          <span className={styles.span__secondary}>xxx</span>
+          <span className="span__primary">xxx</span>
+          <span className="span__secondary">xxx</span>
         </p>
         <p className={styles.accomplishments__paragraph}>
           I co-build most of the features in this subproject, which enables the platform users to
@@ -76,8 +76,8 @@ function Accomplishments() {
         <p className={styles.accomplishments__paragraph}>
           One of my biggest responsibilities while working in NG was to introduce unit tests into
           the frontend part of the application.
-          <span className={styles.span__primary}>xxx</span>
-          <span className={styles.span__secondary}>xxx</span>
+          <span className="span__primary">xxx</span>
+          <span className="span__secondary">xxx</span>
         </p>
         <p className={styles.accomplishments__paragraph}>
           Work was wrapped in two week sprints, during which I did my best to deliver particular
@@ -112,45 +112,43 @@ function Accomplishments() {
         </p>
         <p className={styles.accomplishments__paragraph}>
           Hope the time I spent on these tasks was the next pebble on the road to achieve this goal
-          for my company. <span className={styles.span__primary}>xxx</span>
-          <span className={styles.span__secondary}>xxx</span>
+          for my company. <span className="span__primary">xxx</span>
+          <span className="span__secondary">xxx</span>
         </p>
       </AccLine>
       <AccLine waveImage={IMAGES[4]}>
         <h3>5. &ensp; Fixing bugs & Refactoring</h3>
         <p className={styles.accomplishments__paragraph}>
           Apart from building components and creating new functionalities, my work also focused on
-          <span className={styles.span__primary}> fixing bugs</span>.
+          <span className="span__primary"> fixing bugs</span>.
         </p>
         <p className={styles.accomplishments__paragraph}>
           These were reported by testers or found while further development of the application.
         </p>
         <p className={styles.accomplishments__paragraph}>
           In order to do that, I needed to{" "}
-          <span className={styles.span__secondary}> read a lot of code</span>, quite frequently
-          spread out across the project. I find it really useful for{" "}
-          <span className={styles.span__secondary}>deeper understanding</span> of how different
-          parts of the application works.{" "}
+          <span className="span__secondary"> read a lot of code</span>, quite frequently spread out
+          across the project. I find it really useful for{" "}
+          <span className="span__secondary">deeper understanding</span> of how different parts of
+          the application works.{" "}
         </p>
         <p className={styles.accomplishments__paragraph}>
           Reading code builds a firm{" "}
-          <span className={styles.span__secondary}>
-            idea on how data flows through the application
-          </span>{" "}
-          , which I believe I have.
+          <span className="span__secondary">idea on how data flows through the application</span> ,
+          which I believe I have.
         </p>
       </AccLine>
       <AccLine waveImage={IMAGES[5]}>
         <h3>6. &ensp; Legacy code</h3>
         <p className={styles.accomplishments__paragraph}>
           My tasks sometimes included working with{" "}
-          <span className={styles.span__primary}>legacy code</span> also.
+          <span className="span__primary">legacy code</span> also.
         </p>
         <p className={styles.accomplishments__paragraph}>
           The majority of application code I worked with was built using functional{" "}
-          <span className={styles.span__secondary}>React</span> components, although some of them,
-          especially older parts were coded with{" "}
-          <span className={styles.span__secondary}>JS classes</span>.
+          <span className="span__secondary">React</span> components, although some of them,
+          especially older parts were coded with <span className="span__secondary">JS classes</span>
+          .
         </p>
         <p className={styles.accomplishments__paragraph}>
           {" "}
@@ -162,8 +160,8 @@ function Accomplishments() {
         </p>
         <p className={styles.accomplishments__paragraph}>
           To the contrary, the most challenging task in terms of handling solutions used in the
-          past, was <span className={styles.span__secondary}>to prepare HTML/FTL templates</span> to
-          be used with Outlook 2013 version.
+          past, was <span className="span__secondary">to prepare HTML/FTL templates</span> to be
+          used with Outlook 2013 version.
         </p>
         <p className={styles.accomplishments__paragraph}>
           Tasks like that seem annoying and boring but I do not approach such tasks in this manner.{" "}
