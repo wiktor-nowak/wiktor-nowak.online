@@ -1,5 +1,5 @@
 import Home from "@/src/components/Home/Home";
-import { SECTIONS } from "@/src/types/variables";
+import { SECTIONS } from "@/src/variables/general";
 import styles from "./page.module.scss";
 
 import Section from "@/src/components/Section/Section";

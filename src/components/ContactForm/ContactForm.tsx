@@ -2,7 +2,7 @@
 
 import React, { useRef, useActionState } from "react";
 import { sendEmail } from "../../actions/sendEmail";
-import { EMAIL_FORM_SETUP } from "../../types/variables";
+import { EMAIL_FORM_SETUP } from "@/src/variables/general";
 import { EmailFormState } from "../../types/email";
 
 const initialEmailState: EmailFormState = {};

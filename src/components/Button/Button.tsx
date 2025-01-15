@@ -1,22 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { ComponentPropsWithoutRef } from "react";
 import styles from "./button.module.scss";
 import { IconType } from "@/src/types/style";
 
 type ButtonType = {
   isRound?: boolean;
   children: React.ReactNode;
-};
-function clicked() {
-  window.alert("Siema!");
-}
+} & ComponentPropsWithoutRef<"button">;
 
-export default function Button({ isRound = false, children }: ButtonType) {
+export default function Button({ isRound = false, onClick, children }: ButtonType) {
   return (
     <button
+      onClick={onClick}
       className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
-      onClick={clicked}
     >
       {children}
     </button>

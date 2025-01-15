@@ -22,6 +22,6 @@
 }
 
 @mixin content-width {
-  padding: 0 6.5rem 0;
+  padding: 0 6.5rem;
   @content;
 }

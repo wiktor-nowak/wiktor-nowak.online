@@ -1,6 +1,25 @@
 @import "/src/styles/variables.scss";
 @import "/src/styles/breakpoints.scss";
+@import "/src/styles/mixins.scss";
 
 .accomplishments {
-  color: $color-primary;
+  .accomplishments__description {
+    @include body-very-large;
+    @include content-width {
+      padding-bottom: 1rem;
+    }
+    color: $light-grey;
+  }
+
+  .accomplishments__paragraph {
+    @include body-medium;
+    margin-top: 0.75rem;
+
+    .span__primary {
+      color: $color-primary;
+    }
+    .span__secondary {
+      color: $color-secondary;
+    }
+  }
 }

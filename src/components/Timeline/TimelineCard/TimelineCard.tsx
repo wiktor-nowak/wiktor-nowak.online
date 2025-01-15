@@ -7,7 +7,7 @@ type TimelineCardTypes = {
   children: React.ReactNode;
 };
 
-function TimelineCard({ title, alignedRight = false, children }) {
+function TimelineCard({ title, alignedRight = false, children }: TimelineCardTypes) {
   return (
     <>
       {alignedRight ? (

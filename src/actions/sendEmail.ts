@@ -1,7 +1,7 @@
 "use server";
 
 import { convertZodErrors } from "./errors";
-import { EMAIL_FORM_SETUP } from "../types/variables";
+import { EMAIL_FORM_SETUP } from "@/src/variables/general";
 import { EmailFormState, StringMap } from "../types/email";
 import nodemailer from "nodemailer";
 

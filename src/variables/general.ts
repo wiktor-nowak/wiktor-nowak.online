@@ -1,8 +1,4 @@
-export enum HASHTAGS {
-  timeline = "timeline",
-  accomplishments = "accomplishments",
-  techstack = "techstack"
-}
+import { HASHTAGS, SectionsType, NavSectionsType } from "../types/data";
 
 export const SECTIONS: SectionsType = {
   timeline: {
@@ -22,6 +18,21 @@ export const SECTIONS: SectionsType = {
   },
   hobbies: {
     name: "Hobbies"
+  }
+};
+
+export const EMAIL_FORM_SETUP = {
+  signature: {
+    controlName: "imię i nazwisko",
+    errorText: "Wpisz imię i nazwisko"
+  },
+  email: {
+    controlName: "adres e-mail",
+    errorText: "Adres email jest niepoprawny"
+  },
+  message: {
+    controlName: "wiadomość",
+    errorText: "Wpisz treść wiadomości"
   }
 };
 
@@ -50,34 +61,3 @@ export const NAV_SECTIONS: NavSectionsType = [
     name: "Contact"
   }
 ];
-
-export type NavSectionType = {
-  url?: string;
-  name: string;
-};
-
-export type NavSectionsType = NavSectionType[];
-
-export type SectionType = {
-  hashtag?: HASHTAGS;
-  name: string;
-};
-
-export type SectionsType = {
-  [key: string]: SectionType;
-};
-
-export const EMAIL_FORM_SETUP = {
-  signature: {
-    controlName: "imię i nazwisko",
-    errorText: "Wpisz imię i nazwisko"
-  },
-  email: {
-    controlName: "adres e-mail",
-    errorText: "Adres email jest niepoprawny"
-  },
-  message: {
-    controlName: "wiadomość",
-    errorText: "Wpisz treść wiadomości"
-  }
-};

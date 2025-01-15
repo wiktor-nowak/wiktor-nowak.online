@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./timeline.module.scss";
-import TimelineCard from "../TimelineCard/TimelineCard";
+import TimelineCard from "./TimelineCard/TimelineCard";
 
 function Timeline() {
   return (
