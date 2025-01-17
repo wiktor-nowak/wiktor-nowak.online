@@ -1,0 +1,7 @@
+{
+  "name": "wiktor-nowak.online",
+  "short_name": "wiktor-nowak",
+  "theme_color": "#c6f53d",
+  "background_color": "#0e0e0e",
+  "display": "standalone"
+}

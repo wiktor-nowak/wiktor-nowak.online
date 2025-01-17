@@ -2,22 +2,22 @@ import { HASHTAGS, SectionsType, NavSectionsType } from "../types/data";
 
 export const SECTIONS: SectionsType = {
   timeline: {
-    name: "Timeline",
+    name: "My Timeline:",
     hashtag: HASHTAGS.timeline
   },
   acc: {
-    name: "Accomplishments",
+    name: "My Accomplishments:",
     hashtag: HASHTAGS.accomplishments
   },
   languages: {
-    name: "Languages"
+    name: "My Languages:"
   },
   tech: {
-    name: "Tech Stack",
+    name: "My Tech Stack:",
     hashtag: HASHTAGS.techstack
   },
   hobbies: {
-    name: "Hobbies"
+    name: "My Hobbies:"
   }
 };
 
@@ -61,3 +61,5 @@ export const NAV_SECTIONS: NavSectionsType = [
     name: "Contact"
   }
 ];
+
+export const CV_URL = "./cv/CV_WiktorNowak.pdf";

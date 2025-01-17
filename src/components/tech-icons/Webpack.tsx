@@ -1,8 +1,9 @@
-import React from "react";
+import React, { ReactElement } from "react";
+
 import { TechIconType } from "@/src/types/style";
 import styles from "./tech-icons.module.scss";
 
-export function Webpack({ height, width }: TechIconType) {
+export function Webpack({ height, width }: TechIconType): ReactElement<TechIconType> {
   return (
     <svg
       width={width}

@@ -1,0 +1,14 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .tech__signature {
+    @include body-very-small;
+    color: $light-grey;
+  }
+}

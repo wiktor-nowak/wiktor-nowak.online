@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "./acc-line.module.scss";
 import { Angular, Css, Git, NextJs, ReactIcon } from "../../tech-icons";
-import TechIcon from "../../TechIcon/TechIcon";
+import TechIcon from "./AccTechIcon/AccTechIcon";
 import Image, { StaticImageData } from "next/image";
 import Button from "@/src/components/Button/Button";
 import PhotoModal from "../../PhotoModal/PhotoModal";

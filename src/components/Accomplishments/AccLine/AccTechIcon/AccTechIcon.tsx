@@ -1,5 +1,5 @@
 import { IconType } from "@/src/types/style";
-import styles from "./tech-icon.module.scss";
+import styles from "./acc-tech-icon.module.scss";
 import React, { ReactNode } from "react";
 
 type SectionComponentType = {
@@ -9,7 +9,7 @@ type SectionComponentType = {
   IconComponent: React.ComponentType<IconType>;
 };
 
-function TechIcon({ signature, height, width, IconComponent }: SectionComponentType) {
+function AccTechIcon({ signature, height, width, IconComponent }: SectionComponentType) {
   return (
     <section id={signature} className={styles.tech}>
       <IconComponent height={height} width={width} />
@@ -18,4 +18,4 @@ function TechIcon({ signature, height, width, IconComponent }: SectionComponentT
   );
 }
 
-export default TechIcon;
+export default AccTechIcon;
