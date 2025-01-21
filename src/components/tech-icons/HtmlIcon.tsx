@@ -2,7 +2,11 @@ import React, { ReactElement } from "react";
 import { TechIconType } from "@/src/types/style";
 import styles from "./tech-icons.module.scss";
 
-export function HtmlIcon({ height, width }: TechIconType): ReactElement<TechIconType> {
+export function HtmlIcon({
+  height,
+  width,
+  isActive = false
+}: TechIconType): ReactElement<TechIconType> {
   return (
     <svg
       width={width}
@@ -10,7 +14,7 @@ export function HtmlIcon({ height, width }: TechIconType): ReactElement<TechIcon
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={styles.html}
+      className={`${styles.html} ${isActive ? styles["html--active"] : ""}`}
     >
       <path
         d="M5.94907 35.5862L2.82251 0.519043H37.1775L34.0475 35.5809L19.9791 39.4809L5.94907 35.5862Z"

@@ -1,19 +1,30 @@
-import { IconType } from "@/src/types/style";
+"use client";
+
+import { TechIconComponent } from "@/src/types/style";
 import styles from "./acc-tech-icon.module.scss";
-import React, { ReactNode } from "react";
+import React, { useState } from "react";
 
 type SectionComponentType = {
   signature?: string;
-  height: number;
-  width: number;
-  IconComponent: React.ComponentType<IconType>;
+  IconComponent: TechIconComponent;
 };
 
-function AccTechIcon({ signature, height, width, IconComponent }: SectionComponentType) {
+function AccTechIcon({ signature, IconComponent }: SectionComponentType) {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <section id={signature} className={styles.tech}>
-      <IconComponent height={height} width={width} />
-      <p className={styles.tech__signature}>{signature}</p>
+    <section
+      id={signature}
+      className={styles.tech}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+    >
+      <IconComponent height={40} width={40} isActive={isActive} />
+      <p
+        className={`${styles.tech__signature} ${isActive ? styles["tech__signature--active"] : ""}`}
+      >
+        {signature}
+      </p>
     </section>
   );
 }

@@ -23,5 +23,22 @@
 
 @mixin content-width {
   padding: 0 6.5rem;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  @include tablet {
+    padding: 0 22px;
+  }
+
+  @include laptop {
+    padding: 0 60px;
+  }
+  @include desktop {
+    width: 100%;
+    padding: 0 calc((100% - 1224px) * 0.5);
+  }
+
   @content;
 }

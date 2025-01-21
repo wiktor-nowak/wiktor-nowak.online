@@ -3,21 +3,39 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import styles from "./button.module.scss";
 import { IconType } from "@/src/types/style";
+import Link from "next/link";
 
 type ButtonType = {
   isRound?: boolean;
+  href?: string;
   children: React.ReactNode;
 } & ComponentPropsWithoutRef<"button">;
 
-export default function Button({ isRound = false, onClick, children }: ButtonType) {
+export default function Button({
+  isRound = false,
+  href = undefined,
+  onClick,
+  children
+}: ButtonType) {
   return (
-    <button
-      onClick={onClick}
-      className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
-    >
-      {children}
-    </button>
+    <>
+      {href ? (
+        <Link href={href} target="_blank" rel="noopener noreferrer">
+          <button
+            onClick={onClick}
+            className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
+          >
+            {children}
+          </button>
+        </Link>
+      ) : (
+        <button
+          onClick={onClick}
+          className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
+        >
+          {children}
+        </button>
+      )}
+    </>
   );
 }
-
-// ${isRound ? styles["button--icon"] : ""}`

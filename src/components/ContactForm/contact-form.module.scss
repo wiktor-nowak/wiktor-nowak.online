@@ -1,0 +1,68 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins.scss";
+
+.form {
+  @include content-width {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+
+  .form__info {
+    @include body-very-large;
+    color: $color-secondary;
+    line-height: 40px;
+    width: 100%;
+  }
+
+  .form__field {
+    color: $dark-grey;
+    background-color: $light-grey;
+    border-radius: 1rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .form__label {
+      @include body-medium;
+      line-height: 40px;
+      border-bottom: $graphite 1px solid;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .form__title {
+        color: $graphite;
+      }
+
+      .form__error {
+        color: $red-dark;
+      }
+    }
+
+    .form__input {
+      @include body-very-large;
+      color: $background-color;
+      width: 100%;
+      background-color: inherit;
+      line-height: 3rem;
+      padding: 0.75rem 2.5rem;
+    }
+
+    .form__input--textfield {
+      line-height: 2rem;
+      height: 10rem;
+      resize: none;
+    }
+  }
+
+  button {
+    margin: 0 auto 0;
+  }
+}

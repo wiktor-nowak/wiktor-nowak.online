@@ -1,0 +1,24 @@
+@import "@/src/styles/variables";
+@import "@/src/styles/breakpoints";
+@import "@/src/styles/mixins";
+
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .element__name {
+    transition: color ease-in-out 0.3s;
+    @include body-medium;
+    color: $dark-grey;
+    padding-top: 1rem;
+    text-align: center;
+    vertical-align: top;
+    opacity: 1;
+  }
+
+  .element__name--active {
+    color: $color-secondary;
+  }
+}

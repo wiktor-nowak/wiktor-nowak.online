@@ -1,7 +1,11 @@
+"use client";
+
 import { CV_URL } from "@/src/variables/general";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
+import React, { useEffect } from "react";
 import { Else, If, Then } from "react-if";
+import styles from "../navigation.module.scss";
 
 type NavItemType = {
   url?: string;
@@ -10,16 +14,23 @@ type NavItemType = {
 };
 
 function NavItem({ url = "/", text, isDownloadable = false }: NavItemType) {
+  const pathName = usePathname();
+
   return (
     <li>
       <If condition={isDownloadable}>
         <Then>
-          <Link href={CV_URL} target="_blank" rel="noopener noreferrer">
+          <Link className={styles.navlink} href={CV_URL} target="_blank" rel="noopener noreferrer">
             {text}
           </Link>
         </Then>
         <Else>
-          <Link href={url}>{text}</Link>
+          <Link
+            className={`${styles.navlink} ${pathName === url ? styles.navlink__active : ""}`}
+            href={url}
+          >
+            {text}
+          </Link>
         </Else>
       </If>
     </li>

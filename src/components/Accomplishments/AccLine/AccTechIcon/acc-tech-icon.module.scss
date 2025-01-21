@@ -10,5 +10,10 @@
   .tech__signature {
     @include body-very-small;
     color: $light-grey;
+    transition: color ease-in-out 0.3s;
+  }
+
+  .tech__signature--active {
+    color: $color-secondary;
   }
 }

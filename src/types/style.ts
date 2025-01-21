@@ -14,7 +14,9 @@ export type IconType = {
   state?: IconState;
 };
 
-export type TechIconType = Omit<IconType, "state">;
+export type TechIconType = Omit<IconType, "state"> & { isActive?: boolean };
+export type TechIconComponent = React.ComponentType<TechIconType>;
+export type TechIconWithName = { Icon: TechIconComponent; name: string };
 
 export function checkType(x: IconState): string {
   let style: string;

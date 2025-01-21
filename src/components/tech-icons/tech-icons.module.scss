@@ -16,7 +16,7 @@
   }
 }
 
-.angular:hover {
+.angular--active {
   .angular__primary {
     fill: #a6120d;
   }
@@ -44,7 +44,7 @@
   }
 }
 
-.css:hover {
+.css--active {
   .css__primary {
     fill: #1572b6;
   }
@@ -66,7 +66,7 @@
   }
 }
 
-.git:hover {
+.git--active {
   .git__primary {
     fill: #f34f29;
   }
@@ -88,7 +88,7 @@
   }
 }
 
-.html:hover {
+.html--active {
   .html__primary {
     fill: #e44d26;
   }
@@ -110,7 +110,7 @@
   }
 }
 
-.jest:hover {
+.jest--active {
   .jest__primary {
     fill: #99425b;
   }
@@ -129,7 +129,7 @@
   }
 }
 
-.js:hover {
+.js--active {
   .js__primary {
     fill: #f0db4f;
   }
@@ -148,7 +148,7 @@
   }
 }
 
-.next:hover {
+.next--active {
   .next__primary {
     fill: #000000;
   }
@@ -163,7 +163,7 @@
     fill: #cfcece;
   }
 }
-.node:hover {
+.node--active {
   .node__primary {
     fill: #83cd29;
   }
@@ -182,7 +182,7 @@
   }
 }
 
-.react:hover {
+.react--active {
   .react__primary {
     fill: #61dafb;
   }
@@ -200,7 +200,7 @@
     fill: #cfcece;
   }
 }
-.redux:hover {
+.redux--active {
   .redux__primary {
     fill: #764abc;
   }
@@ -222,7 +222,7 @@
   }
 }
 
-.rollup:hover {
+.rollup--active {
   .rollup__primary {
     fill: #fbb040;
   }
@@ -244,7 +244,7 @@
   }
 }
 
-.sass:hover {
+.sass--active {
   .sass__primary {
     fill: #cb6699;
   }
@@ -260,7 +260,7 @@
   }
 }
 
-.tailwind:hover {
+.tailwind--active {
   .tailwind__primary {
     fill: #38bdf8;
   }
@@ -282,7 +282,7 @@
   }
 }
 
-.tl:hover {
+.tl--active {
   .tl__primary {
     fill: #640e0e;
   }
@@ -307,7 +307,7 @@
   }
 }
 
-.ts:hover {
+.ts--active {
   .ts__primary {
     fill: #007acc;
   }
@@ -329,7 +329,7 @@
   }
 }
 
-.webpack:hover {
+.webpack--active {
   .webpack__primary {
     fill: #1c78c0;
   }

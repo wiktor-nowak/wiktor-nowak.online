@@ -2,87 +2,63 @@
 @import "@/src/styles/breakpoints";
 @import "@/src/styles/mixins";
 
-.embla {
-  $fade-point: 10%;
-  margin: 0 auto 0;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black $fade-point,
-    black calc(100% - $fade-point),
-    transparent
-  );
+.tech {
+  @include body-very-large;
+  @include content-width {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  width: 100%;
+  height: 100%;
+  background-color: $graphite;
+  border-radius: 1rem;
 
-  .embla__viewport {
-    width: 100%;
-    overflow: hidden;
-    padding: 1.5rem 0;
+  .embla {
+    $fade-point: 10%;
+    margin: 0 auto 0;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black $fade-point,
+      black calc(100% - $fade-point),
+      transparent
+    );
 
-    .embla__container {
+    .embla__viewport {
       width: 100%;
-      display: flex;
-      touch-action: pan-y pinch-zoom;
-      height: fit-content;
+      overflow: hidden;
+      padding: 1.5rem 0;
 
-      .embla__slide {
-        position: relative;
+      .embla__container {
         width: 100%;
-        height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .embla__name {
-          transition: opacity 0.3s ease-in-out;
-          position: absolute;
-          bottom: -2rem;
-          left: 50%;
-          height: 3rem;
-          transform: translate(-50%, 0);
-          @include body-medium;
-          color: $color-primary;
-          padding-top: 2rem;
-          text-align: center;
-          vertical-align: top;
-          opacity: 1;
-        }
-
-        .embla__name--active {
-          opacity: 1;
-        }
-      }
-
-      @include mobile {
-        gap: 1rem;
-        .embla__slide {
-          flex: 0 0 100%;
-        }
-      }
-      @include laptop {
-        gap: 1.5rem;
+        touch-action: pan-y pinch-zoom;
 
         .embla__slide {
-          flex: 0 0 calc(((100%) / 3) - 22px);
+          width: 10%;
+          height: 100%;
         }
-      }
-      @include desktop {
-        gap: 1rem;
-        .embla__slide {
-          flex: 0 0 10%;
-        }
-      }
-    }
 
-    .embla__bg {
-      background-color: inherit;
-      width: 100%;
-      height: 4rem;
-      transition: transform 0.3s ease-in-out;
-      transform-origin: top;
-      transform: scaleY(0);
-    }
-    .embla__bg--active {
-      transform: scaleY(1);
+        @include mobile {
+          gap: 1rem;
+          .embla__slide {
+            flex: 0 0 100%;
+          }
+        }
+        @include laptop {
+          gap: 1.5rem;
+
+          .embla__slide {
+            flex: 0 0 calc(((100%) / 3) - 22px);
+          }
+        }
+        @include desktop {
+          gap: 1rem;
+          .embla__slide {
+            flex: 0 0 10%;
+          }
+        }
+      }
     }
   }
 }

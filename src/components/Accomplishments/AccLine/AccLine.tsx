@@ -2,19 +2,26 @@
 
 import React, { useState } from "react";
 import styles from "./acc-line.module.scss";
-import { Angular, Css, Git, NextJs, ReactIcon } from "../../tech-icons";
 import TechIcon from "./AccTechIcon/AccTechIcon";
 import Image, { StaticImageData } from "next/image";
 import Button from "@/src/components/Button/Button";
 import PhotoModal from "../../PhotoModal/PhotoModal";
+import { TechIconWithName } from "@/src/types/style";
+import { techIcons } from "@/src/components/tech-icons";
 
 type AccLineTypes = {
   waveImage: StaticImageData;
   projectImage?: StaticImageData;
+  displayedIcons?: string[];
   children: React.ReactNode;
 };
 
-function AccLine({ waveImage, projectImage = undefined, children }: AccLineTypes) {
+function AccLine({
+  waveImage,
+  projectImage = undefined,
+  displayedIcons = [],
+  children
+}: AccLineTypes) {
   const [modalActive, setModalActive] = useState(false);
 
   const toggleModal = () => {
@@ -34,11 +41,13 @@ function AccLine({ waveImage, projectImage = undefined, children }: AccLineTypes
           )}
         </div>
         <div className={styles.line__icons}>
-          <TechIcon signature="AngularJS" height={40} width={40} IconComponent={Angular} />
-          <TechIcon signature="CSS3" height={40} width={40} IconComponent={Css} />
-          <TechIcon signature="Git" height={40} width={40} IconComponent={Git} />
-          <TechIcon signature="React" height={40} width={40} IconComponent={ReactIcon} />
-          <TechIcon signature="Next.js" height={40} width={40} IconComponent={NextJs} />
+          {techIcons
+            .filter(({ name }) => {
+              return displayedIcons.includes(name);
+            })
+            .map(({ Icon, name }, index: number) => (
+              <TechIcon signature={name} IconComponent={Icon} key={index} />
+            ))}
         </div>
       </div>
       {modalActive && projectImage && (

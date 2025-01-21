@@ -19,6 +19,7 @@
   }
 
   .contact__line {
+    @include body-very-large;
     color: $light-grey;
     line-height: 40px;
     display: flex;

@@ -3,12 +3,12 @@ import React, { ReactElement } from "react";
 import { TechIconType } from "@/src/types/style";
 import styles from "./tech-icons.module.scss";
 
-export function Ts({ height, width }: TechIconType): ReactElement<TechIconType> {
+export function Ts({ height, width, isActive = false }: TechIconType): ReactElement<TechIconType> {
   return (
     <svg
       width={width}
       height={height}
-      className={styles.ts}
+      className={`${styles.ts} ${isActive ? styles["ts--active"] : ""}`}
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

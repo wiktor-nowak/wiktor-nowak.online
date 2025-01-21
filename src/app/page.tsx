@@ -9,6 +9,7 @@ import Tech from "@/src/components/Tech/Tech";
 import Button from "../components/Button/Button";
 import Timeline from "../components/Timeline/Timeline";
 import Link from "next/link";
+import Carousel from "../components/Tech/Carousel/Carousel";
 
 const HOBBIES = ["Sport", "Heavy music", "Board & PC Games"];
 const LANGUAGES = ["English - C1", "Polish - native"];
@@ -35,7 +36,7 @@ export default function MainPage() {
         <List list={LANGUAGES} />
       </Section>
       <Section name={SECTIONS.tech.name} hashtag={SECTIONS.tech.hashtag} withLine>
-        <Tech />
+        <Carousel />
       </Section>
       <Section name={SECTIONS.hobbies.name} hashtag={SECTIONS.hobbies.hashtag} withLine>
         <List list={HOBBIES} />

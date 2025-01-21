@@ -4,6 +4,9 @@ import Image from "next/image";
 import portrait from "@/public/photos/wiktor-nowak-photo-saturated-600.png";
 import Button from "../Button/Button";
 import { Github, In } from "../icons";
+import Link from "next/link";
+import { CV_URL, GITHUB_URL, LINKEDIN_URL } from "@/src/variables/general";
+import { HASHTAGS } from "@/src/types/data";
 
 function Home() {
   return (
@@ -22,21 +25,23 @@ function Home() {
       </div>
       <div className={styles.homepage__under}>
         <div className={styles.homepage__buttons}>
-          <Button>
+          <Button href={GITHUB_URL}>
             <p>
               <Github height={24} width={24} />
               GitHub
             </p>
           </Button>
-          <Button>
-            <p>Accomplishments</p>
-          </Button>
-          <Button>
+          <Link href={`#${HASHTAGS.accomplishments}`}>
+            <Button>
+              <p>Accomplishments</p>
+            </Button>
+          </Link>
+          <Button href={LINKEDIN_URL}>
             <p>
               <In height={24} width={24} /> LinkedIn
             </p>
           </Button>
-          <Button>
+          <Button href={CV_URL}>
             <p>Download my CV</p>
           </Button>
         </div>

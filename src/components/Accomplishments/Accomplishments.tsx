@@ -26,7 +26,11 @@ function Accomplishments() {
         possimus adipisci cum ex quam repellendus vitae sunt nisi commodi quia esse quisquam
         cupiditate labore hic eum culpa, consequatur asperiores vero quasi debitis! Ab, maiores.
       </p>
-      <AccLine waveImage={IMAGES[0]} projectImage={ng}>
+      <AccLine
+        waveImage={IMAGES[0]}
+        projectImage={ng}
+        displayedIcons={["React", "JavaScript", "Redux", "Sass", "Git"]}
+      >
         <h3>1. &ensp; Components / Functionalities</h3>
         <p className={styles.accomplishments__paragraph}>
           As a <span className="span__secondary">NorthGravity</span> employee, I was involved in
@@ -49,7 +53,11 @@ function Accomplishments() {
           <span className="span__secondary">my strengths</span>.
         </p>
       </AccLine>
-      <AccLine waveImage={IMAGES[1]} projectImage={kc}>
+      <AccLine
+        waveImage={IMAGES[1]}
+        projectImage={kc}
+        displayedIcons={["React", "JavaScript", "HTML5", "Sass", "Git"]}
+      >
         <h3>2. &ensp; Knowledge Center</h3>
         <p className={styles.accomplishments__paragraph}>
           One of my first tasks, which helped me to get into real life development was creating an
@@ -71,7 +79,10 @@ function Accomplishments() {
           documentation page.
         </p>
       </AccLine>
-      <AccLine waveImage={IMAGES[2]}>
+      <AccLine
+        waveImage={IMAGES[2]}
+        displayedIcons={["Jest", "Testing Library", "Rollup.js", "Webpack"]}
+      >
         <h3>3. &ensp; Jest configuration</h3>
         <p className={styles.accomplishments__paragraph}>
           One of my biggest responsibilities while working in NG was to introduce unit tests into
@@ -87,9 +98,6 @@ function Accomplishments() {
           For sure, I can say that I learned a lot about setting up test environments for projects
           using Webpack and Rollup and preparing tests of course.
         </p>
-      </AccLine>
-      <AccLine waveImage={IMAGES[3]}>
-        <h3>4. &ensp; Jest + RTL</h3>
         <p className={styles.accomplishments__paragraph}>
           These two keywords above address how I helped my team in making sure their changes are
           safe for the rest of the application.
@@ -116,7 +124,10 @@ function Accomplishments() {
           <span className="span__secondary">xxx</span>
         </p>
       </AccLine>
-      <AccLine waveImage={IMAGES[4]}>
+      <AccLine
+        waveImage={IMAGES[4]}
+        displayedIcons={["React", "JavaScript", "TypeScript", "Redux"]}
+      >
         <h3>5. &ensp; Fixing bugs & Refactoring</h3>
         <p className={styles.accomplishments__paragraph}>
           Apart from building components and creating new functionalities, my work also focused on
@@ -138,7 +149,7 @@ function Accomplishments() {
           which I believe I have.
         </p>
       </AccLine>
-      <AccLine waveImage={IMAGES[5]}>
+      <AccLine waveImage={IMAGES[5]} displayedIcons={["HTML5", "CSS3", "JavaScript"]}>
         <h3>6. &ensp; Legacy code</h3>
         <p className={styles.accomplishments__paragraph}>
           My tasks sometimes included working with{" "}

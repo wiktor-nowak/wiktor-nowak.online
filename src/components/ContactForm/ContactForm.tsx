@@ -2,8 +2,10 @@
 
 import React, { useRef, useActionState } from "react";
 import { sendEmail } from "../../actions/sendEmail";
+import styles from "./contact-form.module.scss";
 import { EMAIL_FORM_SETUP } from "@/src/variables/general";
 import { EmailFormState } from "../../types/email";
+import Button from "../Button/Button";
 
 const initialEmailState: EmailFormState = {};
 
@@ -12,23 +14,53 @@ function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
 
   return (
-    <form action={formAction} ref={formRef}>
-      <div>
-        <label htmlFor="signature">{EMAIL_FORM_SETUP.signature.controlName}</label>
-        <input type="text" name="signature" defaultValue={serverState.data?.signature} />
-        <p>{serverState.errors?.signature}</p>
+    <form action={formAction} ref={formRef} className={styles.form}>
+      <p className={styles.form__info}>All fields in the form are required.</p>
+      <div className={styles.form__field}>
+        <div className={styles.form__label}>
+          <label htmlFor="signature" className={styles.form__title}>
+            {EMAIL_FORM_SETUP.signature.controlName}
+          </label>
+          <p className={styles.form__error}>{serverState.errors?.signature}</p>
+        </div>
+        <input
+          type="text"
+          name="signature"
+          defaultValue={serverState.data?.signature}
+          className={styles.form__input}
+        />
       </div>
-      <div>
-        <label htmlFor="email">{EMAIL_FORM_SETUP.email.controlName}</label>
-        <input type="text" name="email" defaultValue={serverState.data?.email} />
-        <p>{serverState.errors?.email}</p>
+      <div className={styles.form__field}>
+        <div className={styles.form__label}>
+          <label htmlFor="email" className={styles.form__title}>
+            {EMAIL_FORM_SETUP.email.controlName}
+          </label>
+          <p className={styles.form__error}>{serverState.errors?.email}</p>
+        </div>
+        <input
+          type="text"
+          name="email"
+          defaultValue={serverState.data?.email}
+          className={styles.form__input}
+        />
       </div>
-      <div>
-        <label htmlFor="message">{EMAIL_FORM_SETUP.message.controlName}</label>
-        <textarea name="message" defaultValue={serverState.data?.message} />
-        <p>{serverState.errors?.message}</p>
+      <div className={styles.form__field}>
+        <div className={styles.form__label}>
+          <label htmlFor="message" className={styles.form__title}>
+            {EMAIL_FORM_SETUP.message.controlName}
+          </label>
+          <p className={styles.form__error}>{serverState.errors?.message}</p>
+        </div>
+        <textarea
+          name="message"
+          defaultValue={serverState.data?.message}
+          className={`${styles.form__input} ${styles["form__input--textfield"]}`}
+        />
       </div>
-      <button type="submit">SEND</button>
+
+      <Button type="submit">
+        <p>Send Message</p>
+      </Button>
     </form>
   );
 }

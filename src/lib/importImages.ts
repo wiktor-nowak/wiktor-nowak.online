@@ -9,7 +9,7 @@ export type ImageObject = {
 export async function importImages(folderPath: string): Promise<ImageObject[]> {
   try {
     const resolvedPath = path.join(process.cwd(), folderPath);
-    const files = fs.readdirSync(resolvedPath);
+    const files = await fs.readdirSync(resolvedPath);
     const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
     const images = files.filter((file) =>
       imageExtensions.includes(path.extname(file).toLowerCase())
