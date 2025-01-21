@@ -21,3 +21,8 @@ export type SectionType = {
 export type SectionsType = {
   [key: string]: SectionType;
 };
+
+export type ActivatedItemType = {
+  isActive: boolean;
+  toggleActive: () => void;
+};

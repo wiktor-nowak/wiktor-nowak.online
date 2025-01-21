@@ -1,0 +1,90 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins";
+
+.mobile {
+  display: none;
+  position: absolute;
+  top: 41px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transform: scaleY(0);
+  background-color: $bg-color;
+  // transition: transform 0.5s ease-in, position 0.5s ease-in;
+  transform-origin: top;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  touch-action: none;
+
+  @include mobile {
+    display: flex;
+  }
+
+  .mobile__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    z-index: -1;
+  }
+
+  .mobile__nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-bottom: 0.5rem;
+
+    li {
+      @include body-medium;
+      list-style-type: none;
+      padding: 0.5rem 0 0.5rem 1rem;
+      color: $medium-grey;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.mobile__active {
+  animation: activateMenu 0.3s ease forwards;
+}
+.mobile__hidden {
+  animation: hideMenu 0.3s ease forwards;
+}
+
+@keyframes activateMenu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}

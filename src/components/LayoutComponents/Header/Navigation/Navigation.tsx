@@ -13,8 +13,8 @@ const NAV_ELEMENTS = NAV_SECTIONS.map((el) => {
 
 function Navigation() {
   return (
-    <nav>
-      <ul className={styles["navigation-panel"]}>{NAV_ELEMENTS}</ul>
+    <nav className={styles.navigation}>
+      <ul>{NAV_ELEMENTS}</ul>
     </nav>
   );
 }

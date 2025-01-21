@@ -1,28 +1,20 @@
 @import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
 
-.navigation-panel {
+.navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
-  li {
-    @include body-medium;
-    list-style-type: none;
-    padding: 16px;
-    color: $medium-grey;
-    height: 100%;
+  @include mobile {
+    display: none;
+  }
 
-    .navlink {
-      cursor: pointer;
-    }
-
-    .navlink:active,
-    .navlink:hover {
-      color: $off-white;
-    }
-
-    .navlink__active {
-      color: $off-white;
+  ul {
+    li {
+      list-style-type: none;
+      padding: 16px;
+      height: 100%;
     }
   }
 }

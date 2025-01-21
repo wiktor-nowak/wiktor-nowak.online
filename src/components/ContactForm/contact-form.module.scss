@@ -3,8 +3,7 @@
 
 .form {
   @include content-width {
-    padding-top: 3rem;
-    padding-bottom: 7rem;
+    padding: 2rem 0 2rem;
   }
   width: 100%;
   display: flex;
@@ -15,6 +14,10 @@
 
   .form__info {
     @include body-very-large;
+    @include mobile {
+      @include body-medium;
+      text-align: center;
+    }
     color: $color-secondary;
     line-height: 40px;
     width: 100%;
@@ -48,7 +51,8 @@
 
     .form__input {
       @include body-very-large;
-      color: $background-color;
+      color: $bg-color;
+      outline: 0;
       width: 100%;
       background-color: inherit;
       line-height: 3rem;
@@ -59,6 +63,20 @@
       line-height: 2rem;
       height: 10rem;
       resize: none;
+
+      @include mobile {
+        height: 30rem;
+      }
+    }
+
+    .form__field--error {
+      .form__label {
+        background-color: $red-pale;
+      }
+
+      .form__input {
+        background-color: $red-pale;
+      }
     }
   }
 

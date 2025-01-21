@@ -12,7 +12,7 @@ body {
 body {
   @include body-small;
   color: $off-white;
-  background: $background-color;
+  background: $bg-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,6 +52,11 @@ select {
   border: none;
 }
 
+input:active,
+textarea:active {
+  inset: none;
+}
+
 p {
   @include body-medium;
   text-wrap: pretty;
@@ -75,6 +80,10 @@ main {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10rem;
+
+  @include mobile {
+    margin-bottom: 2rem;
+  }
 }
 
 header,
@@ -125,4 +134,20 @@ article {
 }
 .span__secondary {
   color: $color-secondary;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px $light-grey inset !important;
+  -webkit-text-fill-color: $bg-color;
+  -webkit-text-stroke-color: $bg-color;
+  -webkit-text-size-adjust: auto;
+  caret-color: $bg-color;
 }

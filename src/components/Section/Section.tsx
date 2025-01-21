@@ -12,7 +12,7 @@ function Section({ hashtag, name, withLine = false, children }: SectionComponent
   return (
     <section id={hashtag} className={styles.section}>
       {withLine && <div className={styles.section__line} />}
-      <h2 className={styles.section__heading}>{name}</h2>
+      <div className={styles.section__heading}>{name}</div>
       <div className={styles.section__content}>{children}</div>
     </section>
   );

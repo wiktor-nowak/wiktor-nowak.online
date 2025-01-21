@@ -11,16 +11,28 @@
   }
 
   .section__heading {
-    @include content-width;
+    @include content-width {
+    }
+    @include header-h2;
     height: 118px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     color: $medium-grey;
+
+    @include mobile {
+      @include header-h4;
+      line-height: 2rem;
+      height: 80px;
+    }
   }
 
   .section__content {
     width: 100%;
     padding: 1.5rem 0 10rem;
+
+    @include mobile {
+      padding: 1.5rem 0 3rem;
+    }
   }
 }

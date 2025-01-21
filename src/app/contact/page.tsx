@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <>
       <div className={styles.contact}>
-        <h1 className="span__primary">Wiktor Nowak</h1>
+        <header className={styles.contact__header}>Wiktor Nowak</header>
         <div className={styles.contact__line}>
           <MapPin width={24} height={24} /> Bielsko-Biała, Poland
         </div>

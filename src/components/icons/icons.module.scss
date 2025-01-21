@@ -2,26 +2,6 @@
 
 .icon {
   path {
-    fill: $color-secondary;
-    stroke: $color-secondary;
+    stroke: $off-white;
   }
-}
-
-.stroke__white {
-  stroke: $off-white;
-}
-.stroke__disabled {
-  stroke: $dark-grey;
-}
-.stroke__primary {
-  stroke: $color-primary;
-}
-.fill__white {
-  fill: $off-white;
-}
-.fill__disabled {
-  fill: $dark-grey;
-}
-.fill__primary {
-  fill: $color-primary;
 }

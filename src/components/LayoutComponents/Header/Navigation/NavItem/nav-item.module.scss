@@ -1,0 +1,17 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/mixins";
+
+.navlink {
+  cursor: pointer;
+  @include body-medium;
+  color: $medium-grey;
+}
+
+.navlink:active,
+.navlink:hover {
+  color: $off-white;
+}
+
+.navlink__active {
+  color: $off-white;
+}

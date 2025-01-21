@@ -11,7 +11,6 @@ export type IconState = "basic" | "disabled" | "primary";
 export type IconType = {
   height: number;
   width: number;
-  state?: IconState;
 };
 
 export type TechIconType = Omit<IconType, "state"> & { isActive?: boolean };
