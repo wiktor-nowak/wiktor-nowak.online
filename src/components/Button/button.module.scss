@@ -8,6 +8,7 @@
   stroke: $off-white;
   background-color: transparent;
   height: 44px;
+  width: auto;
   border-radius: 22px;
   padding: 0.5rem 2rem;
   border: $medium-grey 1px solid;
@@ -17,23 +18,35 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
-  p {
+  .button__text {
     @include body-large;
+    flex: 1 0 auto;
     color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-      path {
-        stroke: inherit;
-      }
+  }
+  svg {
+    margin-right: 0.5rem;
+    flex: 1 0 auto;
+
+    path {
+      stroke: inherit;
     }
   }
 }
 
-.button--isRound {
-  padding: 0;
-  width: 44px;
+.button--shrinking {
+  @include mobile {
+    width: 44px;
+    padding: 0;
+    margin: 0;
+
+    .button__text {
+      display: none;
+    }
+
+    svg {
+      margin: 0;
+    }
+  }
 }
 
 .button:active {
@@ -44,12 +57,12 @@
   border: $color-primary 1px solid;
   background-color: $color-primary;
 
-  p {
+  .button__text {
     color: $graphite;
-    svg {
-      path {
-        stroke: $graphite;
-      }
+  }
+  svg {
+    path {
+      stroke: $graphite;
     }
   }
 }

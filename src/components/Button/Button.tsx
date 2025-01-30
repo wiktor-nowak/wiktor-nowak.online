@@ -1,40 +1,42 @@
 "use client";
 
-import React, { ComponentPropsWithoutRef } from "react";
+import React, { ComponentPropsWithoutRef, ComponentType } from "react";
 import styles from "./button.module.scss";
 import { IconType } from "@/src/types/style";
 import Link from "next/link";
 
 type ButtonType = {
-  isRound?: boolean;
   href?: string;
-  children: React.ReactNode;
+  isShrinking?: boolean;
+  Icon?: ComponentType<IconType>;
+  text: string;
 } & ComponentPropsWithoutRef<"button">;
 
 export default function Button({
-  isRound = false,
   href = undefined,
-  onClick,
-  children
+  Icon = null,
+  isShrinking = false,
+  text,
+  onClick
 }: ButtonType) {
+  const buttonElement = (
+    <button
+      onClick={onClick}
+      className={`${styles.button} ${isShrinking ? styles["button--shrinking"] : ""}`}
+    >
+      {Icon && <Icon width={24} height={24} />}
+      <p className={styles.button__text}>{text}</p>
+    </button>
+  );
+
   return (
     <>
       {href ? (
         <Link href={href} target="_blank" rel="noopener noreferrer">
-          <button
-            onClick={onClick}
-            className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
-          >
-            {children}
-          </button>
+          {buttonElement}
         </Link>
       ) : (
-        <button
-          onClick={onClick}
-          className={`${styles.button} ${isRound ? styles["button--isRound"] : ""}`}
-        >
-          {children}
-        </button>
+        <>{buttonElement}</>
       )}
     </>
   );

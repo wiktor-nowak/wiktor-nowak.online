@@ -53,7 +53,7 @@ export const sendEmail = async (
       await transport.sendMail({
         from: SMTP_EMAIL,
         to: SMTP_EMAIL,
-        subject: `New contact from ${unvalidatedEmailData.signature} | trenersadowski.pl`,
+        subject: `New contact from ${unvalidatedEmailData.signature} | wiktor-nowak.online`,
         html: formattedMessage,
         text: `Recived from:  ${unvalidatedEmailData.signature} | from email address: ${unvalidatedEmailData.email} | <br/> message: ${unvalidatedEmailData.message}`,
         replyTo: unvalidatedEmailData.email

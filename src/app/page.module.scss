@@ -1,17 +1,14 @@
 @import "/src/styles/variables.scss";
 @import "/src/styles/breakpoints.scss";
 
-.home__content {
+.download__button {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 5rem;
-  align-items: center;
+  display: grid;
+  place-items: center;
 
-  p {
-    @include header-h2;
-    width: 100%;
-    text-align: center;
+  @include mobile {
+    button {
+      min-width: 100%;
+    }
   }
 }

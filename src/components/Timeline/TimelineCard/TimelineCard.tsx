@@ -15,14 +15,14 @@ function TimelineCard({ title, alignedRight = false, children }: TimelineCardTyp
           <div className={styles.card__blank} />
           <div className={styles.card__content}>
             <div className={styles.card__triangle__right} />
-            <h3 className={styles.card__header}>{title}</h3>
+            <header className={styles.card__header}>{title}</header>
             <div className={styles.card__description}>{children}</div>
           </div>
         </div>
       ) : (
         <div className={styles.card}>
           <div className={styles.card__content}>
-            <h3 className={styles.card__header}>{title}</h3>
+            <header className={styles.card__header}>{title}</header>
             <div className={styles.card__description}>{children}</div>
             <div className={styles.card__triangle} />
           </div>

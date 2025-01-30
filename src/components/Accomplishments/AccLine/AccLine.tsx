@@ -11,6 +11,7 @@ import { techIcons } from "@/src/components/tech-icons";
 
 type AccLineTypes = {
   waveImage: StaticImageData;
+  title: string;
   projectImage?: StaticImageData;
   displayedIcons?: string[];
   children: React.ReactNode;
@@ -18,6 +19,7 @@ type AccLineTypes = {
 
 function AccLine({
   waveImage,
+  title,
   projectImage = undefined,
   displayedIcons = [],
   children
@@ -30,15 +32,14 @@ function AccLine({
 
   return (
     <div className={styles.line}>
-      <div className={styles.line__content}>{children}</div>
+      <div className={styles.line__content}>
+        <header className={styles.line__header}>{title}</header>
+        {children}
+      </div>
       <div className={styles.line__wave}>
         <div className={styles.line__picture}>
           <Image src={waveImage.src} alt="Wave Image." fill />
-          {projectImage && (
-            <Button onClick={toggleModal}>
-              <p>See more</p>
-            </Button>
-          )}
+          {projectImage && <Button onClick={toggleModal} text="See more" />}
         </div>
         <div className={styles.line__icons}>
           {techIcons

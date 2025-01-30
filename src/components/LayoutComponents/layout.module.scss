@@ -8,6 +8,7 @@
   justify-content: start;
   height: fit-content;
   position: relative;
+  border-bottom: 1px solid $medium-grey;
 
   .header__bar {
     @include body-very-small;
@@ -28,14 +29,6 @@
       color: $dark-grey;
       text-transform: uppercase;
     }
-  }
-
-  .header__line {
-    position: relative;
-    left: -15%;
-    background-color: $medium-grey;
-    height: 1px;
-    width: 130%;
   }
 }
 

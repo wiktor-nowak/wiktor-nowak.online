@@ -8,12 +8,8 @@
     padding: 0 16px;
   }
 
-  @include tablet {
-    padding: 0 22px;
-  }
-
   @include laptop {
-    padding: 0 60px;
+    padding: 0 40px;
   }
   @include desktop {
     width: 100%;
@@ -26,11 +22,6 @@
 
   @include mobile {
     padding: 0 1.5rem;
-    @content;
-  }
-
-  @include tablet {
-    padding: 0;
     @content;
   }
 

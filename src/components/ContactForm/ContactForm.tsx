@@ -57,10 +57,7 @@ function ContactForm() {
           className={`${styles.form__input} ${styles["form__input--textfield"]}`}
         />
       </div>
-
-      <Button type="submit">
-        <p>Send Message</p>
-      </Button>
+      <Button type="submit" text="Send Message" />
     </form>
   );
 }

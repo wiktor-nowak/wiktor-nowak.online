@@ -2,15 +2,14 @@
 @import "/src/styles/breakpoints.scss";
 
 .navigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
   @include mobile {
     display: none;
   }
 
   ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     li {
       list-style-type: none;
       padding: 16px;

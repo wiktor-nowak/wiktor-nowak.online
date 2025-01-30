@@ -1,0 +1,22 @@
+@import "/src/styles/variables.scss";
+@import "/src/styles/breakpoints.scss";
+
+.copied {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    @include body-very-large;
+    cursor: pointer;
+
+    @include mobile {
+      @include body-large;
+    }
+  }
+
+  .copied__info {
+    color: $color-secondary;
+    margin-left: 2rem;
+  }
+}

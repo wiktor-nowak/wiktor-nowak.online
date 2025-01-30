@@ -18,7 +18,7 @@ function Header() {
         <Navigation />
         <Burger toggleActive={toggleActivation} isActive={isMobileMenuActive} />
       </div>
-      <div className={styles.header__line} />
+      {/* <div className={styles.header__line} /> */}
       <MobileMenu toggleActive={toggleActivation} isActive={isMobileMenuActive} />
     </header>
   );

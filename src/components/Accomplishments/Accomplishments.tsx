@@ -4,6 +4,7 @@ import AccLine from "./AccLine/AccLine";
 import { importImages } from "@/src/lib/importImages";
 import kc from "@/public/screenshots/kc1.png";
 import ng from "@/public/screenshots/ng1.png";
+import sado from "@/public/screenshots/sadowski.png";
 
 let IMAGES = [];
 async function loadImages() {
@@ -20,20 +21,47 @@ function Accomplishments() {
   return (
     <div className={styles.accomplishments}>
       <p className={styles.accomplishments__description}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, minus. Quasi quae ullam
-        voluptas doloremque magnam id corrupti veritatis, expedita exercitationem vel! Ipsam saepe
-        consectetur dolore explicabo corporis atque deserunt. Nam enim aliquam sapiente placeat
-        possimus adipisci cum ex quam repellendus vitae sunt nisi commodi quia esse quisquam
-        cupiditate labore hic eum culpa, consequatur asperiores vero quasi debitis! Ab, maiores.
+        Sustainable growth is in my opinion a key to good carrier. To achieve it I am using not only
+        those possibilities that my current employer or customer give, but also focus on building my
+        own projects. This particular website may be a great example. In previous months I was
+        learning Next.js to get familiar with SSR, which also comes hand in hand with styling using
+        Tailwind. This approach, different than classic stylesheet may cause significant speed up in
+        development. Apart from that, I finished Angular course organized by EPAM to grasp the
+        differences, between most popular frontend frameworks. I also focus on accessibility in web
+        development to prepare projects, which can be useful for everyone. Plese find some more
+        details about my work below.
       </p>
       <AccLine
         waveImage={IMAGES[0]}
+        title={`${1}. Personal trainer webpage`}
+        projectImage={sado}
+        displayedIcons={["TypeScript", "Next.js", "React", "Sass"]}
+      >
+        <p className={styles.accomplishments__paragraph}>
+          When I recieved a request from <span className="span__secondary">Personal Trainer</span> I
+          was quite interested as sports is one of things I love doing in my spare time. Working on
+          <span className="span__primary">
+            <a href="https://sadowskitrenuje.pl/"> www.sadowskitrenuje.pl </a>
+          </span>
+          offered me a great opportunity to learn more about Next.js.
+        </p>
+        <p className={styles.accomplishments__paragraph}>
+          It is a fairly simple design with some practical features like contact mail form and
+          included payment links. My primary focus was laid on{" "}
+          <span className="span__secondary"> reflecting the design </span> the client demanded.
+        </p>
+        <p className={styles.accomplishments__paragraph}>
+          I hope end-users will be as satisfied with using this website as I was from the effect.
+        </p>
+      </AccLine>
+      <AccLine
+        waveImage={IMAGES[1]}
+        title={`${2}. Components / Functionalities`}
         projectImage={ng}
         displayedIcons={["React", "JavaScript", "Redux", "Sass", "Git"]}
       >
-        <h3>1. &ensp; Components / Functionalities</h3>
         <p className={styles.accomplishments__paragraph}>
-          As a <span className="span__secondary">NorthGravity</span> employee, I was involved in
+          As <span className="span__secondary">NorthGravity</span> employee, I was involved in
           building
           <span className="span__primary"> the core product </span>
           offered by the company.
@@ -54,103 +82,101 @@ function Accomplishments() {
         </p>
       </AccLine>
       <AccLine
-        waveImage={IMAGES[1]}
+        waveImage={IMAGES[2]}
+        title={`${3}. Knowledge Center`}
         projectImage={kc}
         displayedIcons={["React", "JavaScript", "HTML5", "Sass", "Git"]}
       >
-        <h3>2. &ensp; Knowledge Center</h3>
         <p className={styles.accomplishments__paragraph}>
-          One of my first tasks, which helped me to get into real life development was creating an
-          important part of the application my company was developing, which is Knowledge Center.
+          One of my first tasks, which{" "}
+          <span className="span__secondary">helped me to get into real life development</span> was
+          creating an important part of the application my company was developing, which is
+          Knowledge Center.
           <span className="span__primary">xxx</span>
-          <span className="span__secondary">xxx</span>
         </p>
         <p className={styles.accomplishments__paragraph}>
-          I co-build most of the features in this subproject, which enables the platform users to
-          understand how to use it and where to find particular tools and features.{" "}
+          I co-build most of the features in this subproject,{" "}
+          <span className="span__primary">
+            which enables the platform users to understand how to use it
+          </span>{" "}
+          and where to find particular tools and features.{" "}
         </p>
         <p className={styles.accomplishments__paragraph}>
-          It was important especially for the new users or future clients to see the full potential
-          of the website.{" "}
+          It was <span className="span__primary">important</span> especially{" "}
+          <span className="span__primary">for</span> the new users or{" "}
+          <span className="span__primary">future clients</span> to see the full potential of the
+          website.{" "}
         </p>
         <p className={styles.accomplishments__paragraph}>
-          While working on this project I learned a lot, especially about implementing search calls
-          support as well as navigating and scrolling to particular headers of a blog article or
-          documentation page.
+          While working on this project I learned a lot, especially about{" "}
+          <span className="span__secondary">
+            {" "}
+            implementing search calls support as well as navigating{" "}
+          </span>{" "}
+          and scrolling to particular headers of a blog article or documentation page.
         </p>
       </AccLine>
       <AccLine
-        waveImage={IMAGES[2]}
+        title={`${4}. Jest configuration and writing tests`}
+        waveImage={IMAGES[3]}
         displayedIcons={["Jest", "Testing Library", "Rollup.js", "Webpack"]}
       >
-        <h3>3. &ensp; Jest configuration</h3>
         <p className={styles.accomplishments__paragraph}>
-          One of my biggest responsibilities while working in NG was to introduce unit tests into
-          the frontend part of the application.
-          <span className="span__primary">xxx</span>
-          <span className="span__secondary">xxx</span>
+          One of my <span className="span__secondary"> biggest responsibilities </span> while
+          working for NG was to introduce unit tests into the frontend part of the application.
         </p>
         <p className={styles.accomplishments__paragraph}>
-          Work was wrapped in two week sprints, during which I did my best to deliver particular
-          pieces I was assigned with.{" "}
-        </p>
-        <p className={styles.accomplishments__paragraph}>
-          For sure, I can say that I learned a lot about setting up test environments for projects
-          using Webpack and Rollup and preparing tests of course.
-        </p>
-        <p className={styles.accomplishments__paragraph}>
-          These two keywords above address how I helped my team in making sure their changes are
-          safe for the rest of the application.
+          For sure, I can say that I learned a lot about{" "}
+          <span className="span__secondary"> setting up test environments </span> for projects using
+          Webpack and Rollup and preparing tests of course.
         </p>
         <p className={styles.accomplishments__paragraph}>
           I prepared tests for the custom components library, as well as those checking API handling
           methods.
         </p>
         <p className={styles.accomplishments__paragraph}>
-          Unit testing with Jest is quite a modern way to secure the components from unnecessary
-          failures while being used in views and pages of the application.
+          <span className="span__primary">Unit testing </span> with Jest is quite a modern way to
+          secure the components from unnecessary failures while being used in views and pages of the
+          application. The testing framework features were additionally extended by other useful
+          methods from
+          <span className="span__secondary"> Testing Library</span>, which helped me render and
+          rerender components, as well as mock user interactions in a nice and clean way.
         </p>
         <p className={styles.accomplishments__paragraph}>
-          The testing framework features were additionally extended by other useful methods from
-          Testing Library, which helped me render and rerender components, as well as mock user
-          interactions in a nice and clean way.{" "}
-        </p>
-        <p className={styles.accomplishments__paragraph}>
-          I hope you all can agree with me that tests make applications more reliable.{" "}
-        </p>
-        <p className={styles.accomplishments__paragraph}>
-          Hope the time I spent on these tasks was the next pebble on the road to achieve this goal
-          for my company. <span className="span__primary">xxx</span>
-          <span className="span__secondary">xxx</span>
+          I hope we all can agree that
+          <span className="span__primary"> tests make applications more reliable </span>. Going
+          further, I believe that the time I spent on these tasks was the next pebble on the road to
+          achieve reliable and safe code.
         </p>
       </AccLine>
       <AccLine
+        title={`${5}. Fixing bugs & Refactoring`}
         waveImage={IMAGES[4]}
         displayedIcons={["React", "JavaScript", "TypeScript", "Redux"]}
       >
-        <h3>5. &ensp; Fixing bugs & Refactoring</h3>
         <p className={styles.accomplishments__paragraph}>
           Apart from building components and creating new functionalities, my work also focused on
-          <span className="span__primary"> fixing bugs</span>.
-        </p>
-        <p className={styles.accomplishments__paragraph}>
-          These were reported by testers or found while further development of the application.
+          <span className="span__primary"> fixing bugs</span> which were reported by testers or
+          found while further development of the application.
         </p>
         <p className={styles.accomplishments__paragraph}>
           In order to do that, I needed to{" "}
-          <span className="span__secondary"> read a lot of code</span>, quite frequently spread out
+          <span className="span__secondary"> read a lot of code</span>, quite frequently spread
           across the project. I find it really useful for{" "}
           <span className="span__secondary">deeper understanding</span> of how different parts of
           the application works.{" "}
         </p>
         <p className={styles.accomplishments__paragraph}>
-          Reading code builds a firm{" "}
-          <span className="span__secondary">idea on how data flows through the application</span> ,
-          which I believe I have.
+          Reading code builds a firm idea on
+          <span className="span__secondary"> how data flows through the application</span> , which I
+          believe I have.
         </p>
       </AccLine>
-      <AccLine waveImage={IMAGES[5]} displayedIcons={["HTML5", "CSS3", "JavaScript"]}>
-        <h3>6. &ensp; Legacy code</h3>
+      <AccLine
+        waveImage={IMAGES[5]}
+        displayedIcons={["HTML5", "CSS3", "JavaScript"]}
+        title={`${6}. Legacy code`}
+      >
         <p className={styles.accomplishments__paragraph}>
           My tasks sometimes included working with{" "}
           <span className="span__primary">legacy code</span> also.
@@ -159,7 +185,7 @@ function Accomplishments() {
           The majority of application code I worked with was built using functional{" "}
           <span className="span__secondary">React</span> components, although some of them,
           especially older parts were coded with <span className="span__secondary">JS classes</span>
-          .
+          what probably occur a lot in projects developed for couple years already.
         </p>
         <p className={styles.accomplishments__paragraph}>
           {" "}
@@ -167,19 +193,14 @@ function Accomplishments() {
           components to pass redux props to their children).
         </p>
         <p className={styles.accomplishments__paragraph}>
-          These things probably occur a lot in many currently developed projects.
-        </p>
-        <p className={styles.accomplishments__paragraph}>
           To the contrary, the most challenging task in terms of handling solutions used in the
           past, was <span className="span__secondary">to prepare HTML/FTL templates</span> to be
-          used with Outlook 2013 version.
+          used with Outlook 2013 and older versions of this popular software.
         </p>
         <p className={styles.accomplishments__paragraph}>
-          Tasks like that seem annoying and boring but I do not approach such tasks in this manner.{" "}
-        </p>
-        <p className={styles.accomplishments__paragraph}>
-          I believe them to be challenges, which can be cracked with use of some extra time and
-          effort and can give us valuable lessons.
+          Tasks like that seem annoying and boring but I do approach these in different manner. I
+          believe them to be challenges, which can be cracked with use of some extra time and effort
+          and can give us valuable lessons and help value more modern solutions.
         </p>
       </AccLine>
     </div>
