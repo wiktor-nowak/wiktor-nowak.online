@@ -6,7 +6,6 @@ import TechIcon from "./AccTechIcon/AccTechIcon";
 import Image, { StaticImageData } from "next/image";
 import Button from "@/src/components/Button/Button";
 import PhotoModal from "../../PhotoModal/PhotoModal";
-import { TechIconWithName } from "@/src/types/style";
 import { techIcons } from "@/src/components/tech-icons";
 
 type AccLineTypes = {

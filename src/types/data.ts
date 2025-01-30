@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 export enum HASHTAGS {
   timeline = "timeline",
   accomplishments = "accomplishments",

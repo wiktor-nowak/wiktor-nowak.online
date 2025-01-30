@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import styles from "../layout.module.scss";
 import Navigation from "./Navigation/Navigation";
-import { Menu } from "../../icons";
 import Burger from "./Burger/Burger";
 import MobileMenu from "./MobileMenu/MobileMenu";
 

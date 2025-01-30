@@ -3,7 +3,7 @@
 import { CV_URL } from "@/src/variables/general";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { ComponentPropsWithoutRef, useEffect } from "react";
+import React, { ComponentPropsWithoutRef } from "react";
 import { Else, If, Then } from "react-if";
 import styles from "./nav-item.module.scss";
 

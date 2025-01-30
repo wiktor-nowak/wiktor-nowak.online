@@ -1,5 +1,5 @@
 import React from "react";
-import { checkType, IconType } from "@/src/types/style";
+import { IconType } from "@/src/types/style";
 import styles from "./icons.module.scss";
 
 export function Delete({ height, width }: IconType) {

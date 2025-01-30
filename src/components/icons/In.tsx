@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./icons.module.scss";
-import { checkType, IconType } from "@/src/types/style";
+import { IconType } from "@/src/types/style";
 
 export function In({ height, width }: IconType) {
   return (
