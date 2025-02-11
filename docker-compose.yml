@@ -1,6 +1,7 @@
+version: "3.0"
 services:
   next-app:
-    container_name: wiktor-nowak
+    container_name: wiktor-nowak.online
     image: ghcr.io/wiktor-nowak/wiktor-nowak.online:latest
     env_file:
       - .env

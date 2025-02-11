@@ -1,3 +1,5 @@
+// types of data used in project
+
 export enum HASHTAGS {
   timeline = "timeline",
   accomplishments = "accomplishments",

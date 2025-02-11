@@ -13,6 +13,6 @@ COPY tsconfig.json ./
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV BUILD_STANDALONE=true
 
-RUN npm install && npm run build
+RUN npm install --include=optional && npm run build
 
 CMD ["npm", "start"]
