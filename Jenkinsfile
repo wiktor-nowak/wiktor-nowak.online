@@ -12,8 +12,18 @@ pipeline {
     stage('Checkout & Build') {
       steps {
         checkout scm
-        script {
-          docker.build("${REGISTRY}:${IMAGE_TAG}")
+        withCredentials([
+          file(credentialsId: 'wn-personal-website-env', variable: 'ENV_FILE'),
+          file(credentialsId: 'wn-personal-website-next-env', variable: 'NEXT_ENV_FILE')
+        ]) {
+          sh """
+          cp \$ENV_FILE .env
+          cp \$NEXT_ENV_FILE next-env.d.ts
+          
+          docker build -t ${REGISTRY}:${IMAGE_TAG} .
+          
+          rm .env next-env.d.ts
+          """
         }
       }
     }
