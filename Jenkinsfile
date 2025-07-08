@@ -43,14 +43,11 @@ pipeline {
       steps {
         sshagent([SSH_CRED]) {
           sh """
-          ssh -o StrictHostKeyChecking=no ${SSH_HOST} << 'EOF'
-            docker pull ${REGISTRY}:${IMAGE_TAG}
-            docker rm -f ${APP_NAME} || true
-            docker run -d --restart=always \\
-              -p ${DEPLOY_PORT}:3000 \\
-              --name ${APP_NAME} \\
-              ${REGISTRY}:${IMAGE_TAG}
-          EOF
+          ssh -o StrictHostKeyChecking=no ${SSH_HOST} \\
+            docker pull ${REGISTRY}:${IMAGE_TAG} && \\
+            docker rm -f ${APP_NAME} || true && \\
+            docker run -d --restart=always -p ${DEPLOY_PORT}:3000 \\
+                --name ${APP_NAME} ${REGISTRY}:${IMAGE_TAG}
           """
         }
       }
