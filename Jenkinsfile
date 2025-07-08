@@ -9,6 +9,14 @@ pipeline {
     APP_NAME = 'wiktor-nowak.online'
   }
   stages {
+
+    stage('Check Tools') {
+    steps {
+        sh 'which docker && docker --version'
+        sh 'which docker-compose || echo "docker-compose not installed"'
+    }
+    }
+
     stage('Checkout & Build') {
       steps {
         checkout scm
@@ -46,7 +54,7 @@ pipeline {
           ssh -o StrictHostKeyChecking=no ${SSH_HOST} \\
             docker pull ${REGISTRY}:${IMAGE_TAG} && \\
             docker rm -f ${APP_NAME} || true && \\
-            docker-compose up --build
+            docker-compose -f wiktor-website-compose.yml up --build
           """
         }
       }
