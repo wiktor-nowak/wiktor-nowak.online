@@ -46,7 +46,7 @@ pipeline {
           ssh -o StrictHostKeyChecking=no ${SSH_HOST} \\
             docker pull ${REGISTRY}:${IMAGE_TAG} && \\
             docker rm -f ${APP_NAME} || true && \\
-            docker compose up --build
+            docker-compose up --build
           """
         }
       }
