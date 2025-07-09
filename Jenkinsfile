@@ -25,8 +25,8 @@ pipeline {
           file(credentialsId: 'wn-personal-website-next-env', variable: 'NEXT_ENV_FILE')
         ]) {
           sh """
-          sudo cp \$ENV_FILE .env
-          sudo cp \$NEXT_ENV_FILE next-env.d.ts
+          cp \$ENV_FILE .env
+          cp \$NEXT_ENV_FILE next-env.d.ts
           
           docker build -t ${REGISTRY}:${IMAGE_TAG} .
           
