@@ -29,8 +29,6 @@ pipeline {
           cp \$NEXT_ENV_FILE next-env.d.ts
           
           docker build -t ${REGISTRY}:${IMAGE_TAG} .
-          
-          rm .env next-env.d.ts
           """
         }
       }
