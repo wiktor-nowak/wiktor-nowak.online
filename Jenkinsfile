@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    docker {
-        args: '-u root:root'
-    }
-  }
+  agent any
   environment {
     REGISTRY = 'ghcr.io/wiktor-nowak/wiktor-nowak.online'
     IMAGE_TAG = "${env.BUILD_ID}"
