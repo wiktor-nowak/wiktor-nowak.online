@@ -52,7 +52,7 @@ pipeline {
           ssh -o StrictHostKeyChecking=no ${SSH_HOST} \\
             docker pull ${REGISTRY}:${IMAGE_TAG} && \\
             docker rm -f ${APP_NAME} || true && \\
-            docker-compose -f wiktor-website-compose.yml up --build
+            docker-compose -f wiktor-website-compose.yml up --build -d
           """
         }
       }
