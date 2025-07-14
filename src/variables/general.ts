@@ -3,22 +3,22 @@ import { HASHTAGS, SectionsType, NavSectionsType } from "../types/data";
 export const SECTIONS: SectionsType = {
   timeline: {
     name: "My Timeline:",
-    hashtag: HASHTAGS.timeline
+    hashtag: HASHTAGS.timeline,
   },
   acc: {
     name: "My Accomplishments:",
-    hashtag: HASHTAGS.accomplishments
+    hashtag: HASHTAGS.accomplishments,
   },
   languages: {
-    name: "My Languages:"
+    name: "My Languages:",
   },
   tech: {
     name: "My Tech Stack:",
-    hashtag: HASHTAGS.techstack
+    hashtag: HASHTAGS.techstack,
   },
   hobbies: {
-    name: "My Hobbies:"
-  }
+    name: "My Hobbies:",
+  },
 };
 
 const ERROR_TEXT = "The field is required.";
@@ -26,45 +26,47 @@ const ERROR_TEXT = "The field is required.";
 export const EMAIL_FORM_SETUP = {
   signature: {
     controlName: "Full name:",
-    errorText: ERROR_TEXT
+    errorText: ERROR_TEXT,
   },
   email: {
     controlName: "Email address:",
-    errorText: ERROR_TEXT
+    errorText: ERROR_TEXT,
   },
   message: {
     controlName: "Message:",
-    errorText: ERROR_TEXT
-  }
+    errorText: ERROR_TEXT,
+  },
 };
 
 export const NAV_SECTIONS: NavSectionsType = [
   {
     url: "/",
-    name: "Home"
+    name: "Home",
   },
   {
     name: "Timeline",
-    url: `/#${HASHTAGS.timeline}`
+    url: `/#${HASHTAGS.timeline}`,
   },
   {
     name: "Accomplishments",
-    url: `/#${HASHTAGS.accomplishments}`
+    url: `/#${HASHTAGS.accomplishments}`,
   },
   {
     name: "Tech Stack",
-    url: `/#${HASHTAGS.techstack}`
+    url: `/#${HASHTAGS.techstack}`,
   },
   {
-    name: "CV"
+    name: "CV",
   },
   {
     url: "/contact",
-    name: "Contact"
-  }
+    name: "Contact",
+  },
 ];
 
 export const CV_URL = "./cv/CV_WiktorNowak.pdf";
-
 export const LINKEDIN_URL = "https://www.linkedin.com/in/wiktornowak95/";
 export const GITHUB_URL = "https://github.com/wiktor-nowak";
+
+export const SMTP_EMAIL = "nowak.wiktor95@gmail.com";
+export const NEXT_PUBLIC_SITE_URL = "wiktor-nowak.online";

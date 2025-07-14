@@ -4,7 +4,7 @@ import { convertZodErrors } from "./errors";
 import { EMAIL_FORM_SETUP } from "@/src/variables/general";
 import { EmailFormState, StringMap } from "../types/email";
 import nodemailer from "nodemailer";
-
+import { SMTP_EMAIL } from "../variables/general";
 import z from "zod";
 
 const emailSchema = z.object({
@@ -13,19 +13,18 @@ const emailSchema = z.object({
     .string()
     .min(1, EMAIL_FORM_SETUP.email.errorText)
     .email({ message: EMAIL_FORM_SETUP.email.errorText }),
-  message: z.string().min(1, EMAIL_FORM_SETUP.message.errorText)
+  message: z.string().min(1, EMAIL_FORM_SETUP.message.errorText),
 });
 
 export const sendEmail = async (
   prevState: EmailFormState,
   formData: FormData
 ): Promise<EmailFormState> => {
-  const { SMTP_PASSWORD, SMTP_EMAIL } = process.env;
-
+  const { SMTP_PASSWORD } = process.env;
   const unvalidatedEmailData: StringMap = {
     signature: formData.get("signature") as string,
     email: formData.get("email") as string,
-    message: formData.get("message") as string
+    message: formData.get("message") as string,
   };
 
   const validated = emailSchema.safeParse(unvalidatedEmailData);
@@ -34,11 +33,11 @@ export const sendEmail = async (
     service: "gmail",
     auth: {
       user: SMTP_EMAIL,
-      pass: SMTP_PASSWORD
+      pass: SMTP_PASSWORD,
     },
     tls: {
-      rejectUnauthorized: false
-    }
+      rejectUnauthorized: false,
+    },
   });
 
   if (!validated.success) {
@@ -56,7 +55,7 @@ export const sendEmail = async (
         subject: `New contact from ${unvalidatedEmailData.signature} | wiktor-nowak.online`,
         html: formattedMessage,
         text: `Recived from:  ${unvalidatedEmailData.signature} | from email address: ${unvalidatedEmailData.email} | <br/> message: ${unvalidatedEmailData.message}`,
-        replyTo: unvalidatedEmailData.email
+        replyTo: unvalidatedEmailData.email,
       });
     }
     return { successMessage: "Email sent successfully!", data: {} };
