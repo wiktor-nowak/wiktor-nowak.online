@@ -43,7 +43,7 @@ pipeline {
       steps {
         sshagent([SSH_CRED]) {
           sh """
-          cp /home/debian/docker-app/.env /var/jenkins_home/workspace/myPersonalWebsite/
+          cp /tmp/.env /var/jenkins_home/workspace/myPersonalWebsite/
           ssh -o StrictHostKeyChecking=no ${SSH_HOST} \\
             docker pull ${REGISTRY}:${IMAGE_TAG} && \\
             docker rm -f ${APP_NAME} || true && \\
