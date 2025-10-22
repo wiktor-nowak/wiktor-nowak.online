@@ -9,8 +9,17 @@ COPY package*.json pnpm-lock.yaml* ./
 RUN npm ci --silent
 
 # copy app and build
-COPY . .
-RUN npm run build
+COPY package.json package-lock.json* ./
+COPY src ./src
+COPY public ./public
+COPY .eslintrc.json ./
+COPY next-env.d.ts ./
+COPY next.config.ts ./
+COPY tsconfig.json ./
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV BUILD_STANDALONE=true
+
+RUN npm install --include=optional && npm run build
 
 # Stage 2: runtime image
 FROM node:20-alpine AS runner
