@@ -1,6 +1,6 @@
 # Stage 1: install deps and build
 FROM node:20-alpine AS builder
-WORKDIR /apps
+WORKDIR /app
 ENV NODE_ENV=production
 
 # copy package files first and install (cache)
@@ -14,7 +14,7 @@ RUN npm run build
 
 # Stage 2: runtime image
 FROM node:20-alpine AS runner
-WORKDIR /apps
+WORKDIR /app
 ENV NODE_ENV=production
 
 # If you use next start which requires next & react packages
