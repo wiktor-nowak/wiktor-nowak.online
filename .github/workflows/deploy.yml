@@ -15,9 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # - name: Create .env file from secret 💡
-      #   run: echo "${{ secrets.ENV_FILE_CONTENT }}" > wn.env
-      #   shell: bash
+      - name: Create .env file from secret 💡
+        run: echo "${{ secrets.ENV_FILE_CONTENT }}" > .env
+        shell: bash
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
@@ -50,6 +50,9 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             cd /home/deployer/apps
+            cp ./envs/wiktornowak.env ./wiktornowak.env
+            docker compose down
             docker compose pull
             docker compose up -d --remove-orphans
+            rm wiktornowak.env
             docker image prune -af
