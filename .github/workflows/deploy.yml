@@ -32,9 +32,6 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/wiktor-nowak.online:latest
-          # Pass secrets as build arguments
-          build-args: |
-            SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}
 
   deploy:
     needs: build-and-push
