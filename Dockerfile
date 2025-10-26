@@ -4,6 +4,8 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
+ARG SMTP_PASSWORD
+
 COPY package.json package-lock.json* ./
 RUN npm ci
 COPY . .
@@ -14,7 +16,9 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN echo "SMTP_PASSWORD=$SMTP_PASSWORD" >> .env
 RUN npm run build
+RUN rm .env
 
 # Stage 3: Runner
 FROM base AS runner
