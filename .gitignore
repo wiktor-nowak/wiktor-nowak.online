@@ -25,6 +25,9 @@
 *.pem
 .dockerignore
 
+# env files
+*.env*
+
 # debug
 npm-debug.log*
 yarn-debug.log*
